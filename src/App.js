@@ -67,7 +67,7 @@ function App() {
     <Routes> 
       <Route path='/' element={<HomeRoute/> } />
       <Route path='/aboutUs' element={<AboutUsRoute />} />
-      <Route path='/logIn' element={<LogInRoute/>} />
+      <Route path='/logIn' element={<LogInRoute loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>} />
       <Route path='/signUp' element={<SignUpRoute/>} />
       <Route path='/timeline' element={<TimelineRoute 
         listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} />} />

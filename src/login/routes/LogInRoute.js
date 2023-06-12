@@ -3,11 +3,11 @@ import Navbar from '../../navbar/Navbar'
 import Footer from '../../footer/Footer'
 import LogIn from '../components/LogIn'
 
-const LogInRoute = () => {
+const LogInRoute = ({loggedInUser, setLoggedInUser}) => {
   return (
     <div>
         <Navbar />
-        <LogIn />
+        <LogIn loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>
         <Footer />
     </div>
   )

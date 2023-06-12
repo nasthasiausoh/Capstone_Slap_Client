@@ -2,5 +2,11 @@
    display: flex;
    flex-direction: column;
    justify-content: space-around;
-   
+   margin: 30px;
+   height: 100px;
+   width: 90%;
+   padding: 20px;
+   background-color: rgb(118, 134, 234);
+   border-radius: 10px;
 }
+

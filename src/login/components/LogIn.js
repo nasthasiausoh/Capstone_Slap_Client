@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaMailBulk, FaLock} from 'react-icons/fa'
 // import slapLogo from './assets/slap-logo-no-bang.png'
 import '../LogInStyles.css'
 
-const LogIn = () => {
+const LogIn = ({loggedInUser, setLoggedInUser}) => {
+
+    const [authenticatedUser, setAuthenticatedUser] = useState("")
+
+    const fetchLoginInfo = async (email, password) => {
+        const response = await fetch('http://localhost:8080/users/login',{
+            method: "POST", 
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(email, password)
+    });
+
+    const authenticatedUser = await response.json();
+    setLoggedInUser(authenticatedUser);
+    }
+
+    const handleLoginSubmit =(event) => {
+    }
+
     return (
             <section className="login-form-section">
 
@@ -14,7 +31,7 @@ const LogIn = () => {
                 <div className='user-input-sections'> 
                     <section className='username-section'>
                         <h4> <FaMailBulk size={40} style={{color: 'black', marginRight: '2rem'}} /> </h4>
-                        <input type='text' placeholder="Username" className='name'/>
+                        <input type='email' placeholder="Email" className='name'/>
                     </section>
 
                     <section className='password-section'>
@@ -24,7 +41,7 @@ const LogIn = () => {
                 
 
                     <div className='login-button'>
-                        <button>Login</button>
+                        <button onClick={fetchLoginInfo}>Login</button>
                     </div>
 
                     <div className='links'>
