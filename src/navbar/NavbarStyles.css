@@ -1,0 +1,87 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+    margin-top: 1.5%;
+}
+
+/* #the-slap {
+    font-size: 2.9rem;
+}
+#the-slap:hover { */
+    /* background-color: orange; */
+    /* text-decoration: underline;
+    color: orange;
+} */
+
+.slap-logo {
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    width: 300px;
+}
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    padding: 0 1rem;
+}
+
+.nav-menu a {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+    /* color: #0087ca; */
+    color: orange;
+}
+
+.hamburger {
+    /* we want our hamburger to be hidden and only shown with media queries */
+    display: none;
+}
+
+@media screen and (max-width:1240px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        /* styling our drop down */
+        position: absolute;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        top: 0;
+        left: -100%; 
+        /* left: -100% because we want it to be displayed completely off the screen when we  */
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        transition: 0.7s;
+        z-index: -1;
+        background: rgba(0, 0, 0, 1);
+        font-size: 6rem;
+    }
+
+    .nav-menu.active {
+        /* when is active then we want it to be in the top left corner. */
+        left: 0;
+    }
+
+    .nav-menu li {
+        padding: 1rem 0;
+    }
+
+    .nav-menu a {
+        font-size: 2rem;
+    }
+}
