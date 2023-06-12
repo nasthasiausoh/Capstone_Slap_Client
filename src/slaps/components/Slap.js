@@ -1,10 +1,17 @@
 import React from 'react'
+import '../SlapStyles.css'
 
-const Slap = () => {
+const Slap = ({slap, listOfSlaps, setListOfSlaps}) => {
+
   return (
-    <div>
-        <h1> Hi from slap component</h1>
-    </div>
+    <>
+      <div className='slap-component'>
+          <p>{slap.user.username}</p>
+          <p>{slap.message}</p>
+          <p> Mood: {slap.mood}</p> 
+          <p>{slap.dateTime}</p>
+      </div>
+    </>
   )
 }
 

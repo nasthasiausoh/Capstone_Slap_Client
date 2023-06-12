@@ -9,7 +9,7 @@ const SignUp = () => {
         <section className="signin-form-section">
 
 <header className='signin-form'>
-    <h1>Sign up to Slap</h1>
+    <h1>Sign up to The Slap</h1>
 </header>
 
 <div className='signin-user-input-sections'> 

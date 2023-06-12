@@ -8,7 +8,7 @@ const LogIn = () => {
             <section className="login-form-section">
 
                 <header className='login-form'>
-                    <h1>Login to Slap</h1>
+                    <h1>Login to The Slap</h1>
                 </header>
 
                 <div className='user-input-sections'> 

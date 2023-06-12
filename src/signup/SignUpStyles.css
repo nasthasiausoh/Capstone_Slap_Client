@@ -5,6 +5,7 @@
     align-items: center;
     padding: 400px 0 90px 0 ;
     text-align: center;
+    margin-bottom: 5%;
 }
 
 .signin-form {
@@ -12,7 +13,7 @@
     justify-content: center;
     height: 700px;
     width: 40%;
-    box-shadow: 6px 6px 6px 6px rgb(40, 18, 106);
+    box-shadow: 15px 15px 15px 15px rgb(38, 51, 130);
     padding-top: 30px;
     border-radius: 50px;
     background-color: rgb(255, 255, 255);

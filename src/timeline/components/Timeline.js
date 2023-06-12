@@ -1,11 +1,22 @@
 import React from 'react'
+import Slap from '../../slaps/components/Slap'
 import '../TimelineStyles.css'
 
-const Timeline = () => {
+const Timeline = ({listOfSlaps, setListOfSlaps}) => {
+
+    const slapComponents = listOfSlaps.map((slap) => {
+        return (
+            <Slap slap = {slap} 
+            listOfSlaps={listOfSlaps} 
+            setListOfSlaps={setListOfSlaps} />
+        );
+    })
+
+
   return (
     <div>
-        <h1>Hi from timeline component.</h1>
-        <p> Put timeline content in here</p>
+        <h1>Timeline</h1>
+         {slapComponents}
     </div>
   )
 }

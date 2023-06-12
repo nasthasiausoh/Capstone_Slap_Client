@@ -1,13 +1,15 @@
 import React from 'react'
 import Navbar from '../../navbar/Navbar'
-import Timeline from '../components/Timeline'
+import TimelineContainer from '../containers/TimelineContainer'
 import Footer from '../../footer/Footer'
 
-const TimelineRoute = () => {
+const TimelineRoute = ({listOfSlaps, setListOfSlaps}) => {
   return (
     <div>
         <Navbar />
-        <Timeline/>
+        <TimelineContainer 
+        listOfSlaps={listOfSlaps} 
+        setListOfSlaps={setListOfSlaps} />
         <Footer />
         
     </div>

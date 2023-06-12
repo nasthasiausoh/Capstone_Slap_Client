@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
-import slapLogo from '../assets/slap-logo-no-bang.png'
+import slapLogo from '../assets/the-blue-slap-logo.png'
 
 import './NavbarStyles.css'
 
