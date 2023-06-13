@@ -7,13 +7,14 @@ import LogInRoute from './login/routes/LogInRoute';
 import HomeRoute from './home/routes/HomeRoute';
 import SignUpRoute from './signup/routes/SignUpRoute';
 import TimelineRoute from './timeline/routes/TimelineRoute';
+import ProfileRoute from './profile/routes/ProfileRoute';
 
 // we use routes to wrap around the individual Route we have and then we give them a path name and the associated element attached to it.
 // I also put the baseline router-dom information in the index.js file. same for the css stuff in the index.css
 
 function App() {
 
-  const [loggedInUser, setLoggedInUser] = useState ("");
+  const [loggedInUser, setLoggedInUser] = useState (null);
   const [newUser, setNewUser] = useState("");
   const [listOfUsers, setListOfUsers] = useState([]);
   const [userById, setUserById] = useState ("");
@@ -21,24 +22,70 @@ function App() {
   const [newSlap, setNewSlap] = useState({});
 
 
-  const fetchListOfSlaps = async () => {
-    const response = await fetch ("http://localhost:8080/slaps");
-    const data = await response.json();
-    setListOfSlaps(data);
-  } 
-  useEffect(() =>{
-    fetchListOfSlaps()
+  useEffect(() => {
+    fetchListOfUsers();
+    fetchListOfSlaps();
   }, []);
 
-  
   const fetchListOfUsers = async () => {
-    const response = await fetch ("http://localhost:8080/users");
+    const response = await fetch("http://localhost:8080/users");
     const data = await response.json();
     setListOfUsers(data);
-  } 
-  useEffect(() =>{
-    fetchListOfUsers()
-  }, []);
+  };
+
+  const fetchListOfSlaps = async () => {
+    const response = await fetch("http://localhost:8080/slaps");
+    const data = await response.json();
+    setListOfSlaps(data);
+  };
+
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<HomeRoute />} />
+
+        <Route path="/aboutUs" element={<AboutUsRoute />} />
+
+        <Route
+          path="/logIn"
+          element={
+            <LogInRoute
+              loggedInUser={loggedInUser}
+              setLoggedInUser={setLoggedInUser}
+            />
+          }
+        />
+
+        <Route
+          path="/signUp"
+          element={
+            <SignUpRoute
+              loggedInUser={loggedInUser}
+              setLoggedInUser={setLoggedInUser}
+              listOfUsers={listOfUsers}
+              setListOfUsers={setListOfUsers}
+            />
+          }
+        />
+
+        <Route
+          path="/timeline"
+          element={
+            <TimelineRoute
+              listOfSlaps={listOfSlaps}
+              setListOfSlaps={setListOfSlaps}
+            />
+          }
+        />
+
+        <Route
+          path="/profile/:id"
+          element={<ProfileRoute loggedInUser={loggedInUser} />}
+        />
+      </Routes>
+    </>
+  );
+}
 
 
 
@@ -62,32 +109,32 @@ function App() {
   // },[]);
 
 
-  return (
-   <>
-    <Routes> 
-      <Route path='/' element={<HomeRoute/> } />
+//   return (
+//    <>
+//     <Routes> 
+//       <Route path='/' element={<HomeRoute/> } />
 
-      <Route path='/aboutUs' element={<AboutUsRoute />} />
+//       <Route path='/aboutUs' element={<AboutUsRoute />} />
 
-      <Route path='/logIn' element={<LogInRoute 
-        loggedInUser={loggedInUser} 
-        setLoggedInUser={setLoggedInUser}/>} />
+//       <Route path='/logIn' element={<LogInRoute 
+//         loggedInUser={loggedInUser} 
+//         setLoggedInUser={setLoggedInUser}/>} />
 
-      <Route path='/signUp' element={<SignUpRoute
-        loggedInUser={loggedInUser} 
-        setLoggedInUser={setLoggedInUser}
-        listOfUsers={listOfUsers}
-        setListOfUsers={setListOfUsers} 
-        newUser={newUser}
-        setNewUser={setNewUser} />} />
+//       <Route path='/signUp' element={<SignUpRoute
+//         loggedInUser={loggedInUser} 
+//         setLoggedInUser={setLoggedInUser}
+//         listOfUsers={listOfUsers}
+//         setListOfUsers={setListOfUsers} 
+//         newUser={newUser}
+//         setNewUser={setNewUser} />} />
 
-      <Route path='/timeline' element={<TimelineRoute 
-        listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} />} />
+//       <Route path='/timeline' element={<TimelineRoute 
+//         listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} />} />
 
-    </Routes>
-   </>
-  );
-}
+//     </Routes>
+//    </>
+//   );
+// }
 
 export default App;
 
