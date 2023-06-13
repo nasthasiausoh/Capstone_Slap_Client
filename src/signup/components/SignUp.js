@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaMailBulk, FaLock } from 'react-icons/fa';
 
 import '../SignUpStyles.css';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = ({ setLoggedInUser }) => {
   const [newUser, setNewUser] = useState({
@@ -13,6 +14,8 @@ const SignUp = ({ setLoggedInUser }) => {
   });
   const [errorMessage, setErrorMessage] = useState('');
   const [errors, setErrors] = useState({});
+
+  const navigate = useNavigate();
 
   const validateForm = () => {
     let formIsValid = true;
@@ -63,8 +66,8 @@ const SignUp = ({ setLoggedInUser }) => {
     if (response.ok) {
       const authenticatedNewUser = await response.json();
       setLoggedInUser(authenticatedNewUser);
-      // Redirect to another page
-      window.location.href = '/timeline';
+      // Redirect to the profile page
+      navigate(`/profile/${authenticatedNewUser.id}`);
     } else {
       setErrorMessage('Error signing up');
     }
