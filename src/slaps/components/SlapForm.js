@@ -2,33 +2,40 @@ import { useState } from "react";
 import Picker from "@emoji-mart/react";
 import data from "@emoji-mart/data";
 
-const SlapForm = ({ user }) => {
+const SlapForm = ({user}) => {
 
   const [isPickerVisible, setPickerVisible] = useState(false);
-  const [currentEmoji, setCurrentEmoji] = useState(null);
+  const [currentEmoji, setCurrentEmoji] = useState("");
+
+
+
+
+
+  
 
   const handleTogglePicker = () => setPickerVisible(!isPickerVisible);
 
-  return (
-    <div className="emoji-picker">
-      <h1>{currentEmoji || "mood:"}</h1>
-      <button
-        className="emoji"
-        onClick={handleTogglePicker}
-      >
-        mood
-      </button>
+  const handleEmojiClick = (_, emojiObject) => {
+    setCurrentEmoji(emojiObject.emoji);
+    setPickerVisible(false);
+  };
 
-      <div className={isPickerVisible ? "d-block" : "d-none"}>
+  return ( 
+    <div className="emoji-picker">
+      <button className="emoji-picker-toggle" onClick={handleTogglePicker}>
+        {currentEmoji ? (
+          <span role="img" aria-label="Selected Emoji">{currentEmoji}</span>
+        ) : (
+          'Select Emoji'
+        )}
+      </button>
+      {isPickerVisible && (
         <Picker
-          data={data}
-          previewPosition="none"
-          onEmojiSelect={(e) => {
-            setCurrentEmoji(e.native);
-            // setPickerVisible(!isPickerVisible);
-          }}
+          onEmojiClick={handleEmojiClick}
+          disableSearchBar
+          disableSkinTonePicker
         />
-      </div>
+      )}
     </div>
   );
 };
