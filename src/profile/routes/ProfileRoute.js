@@ -3,7 +3,7 @@ import Footer from '../../footer/Footer';
 import Profile from '../components/Profile';
 import Navbar from '../../navbar/Navbar';
 
-const ProfileRoute = ({ loggedInUser }) => {
+const ProfileRoute = ({ loggedInUser, newSlap, setNewSlap, listOfSlaps, setListOfSlaps }) => {
     const [user, setUser] = useState(null);
   
     useEffect(() => {
@@ -29,7 +29,8 @@ const ProfileRoute = ({ loggedInUser }) => {
     return (
         <div>
           <Navbar />
-            {user ? <Profile user={user} /> : <p>Loading user profile...</p>}
+            {user ? <Profile user={user} newSlap={newSlap} setNewSlap={setNewSlap} listOfSlaps={listOfSlaps}
+              setListOfSlaps={setListOfSlaps}/> : <p>Loading user profile...</p>}
             < Footer/>
         </div>
       );

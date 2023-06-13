@@ -3,7 +3,7 @@ import '../ProfileStyles.css'
 import Player from '../../profile/components/Player'
 import SlapForm from '../../slaps/components/SlapForm';
 
-const Profile = ({user}) => {
+const Profile = ({user, newSlap, setNewSlap,listOfSlaps, setListOfSlaps}) => {
 
     return (
         <div className='bio-component'>
@@ -16,7 +16,7 @@ const Profile = ({user}) => {
           {/* <ul>{user.followers}</ul>
           <ul>{user.following}</ul> */}
           <Player/>
-          <SlapForm user={user}/>
+          <SlapForm user={user} newSlap={newSlap} setNewSlap={setNewSlap} listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps}/>
           
           
         </div>

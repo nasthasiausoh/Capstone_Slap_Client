@@ -80,7 +80,7 @@ function App() {
 
         <Route
           path="/profile/:id"
-          element={<ProfileRoute loggedInUser={loggedInUser} />}
+          element={<ProfileRoute loggedInUser={loggedInUser} newSlap={newSlap} listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps}/>}
         />
       </Routes>
     </>
