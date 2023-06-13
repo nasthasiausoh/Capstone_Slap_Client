@@ -37,6 +37,7 @@
 
 .login-form-section h1, .login-form-section p {
     color: black;
+    font-weight: bold;
 }
 
 .login-form-section h1 {
@@ -68,15 +69,19 @@ button {
 }
 
 .login-button {
-    padding: 30%; 
-    margin-top: 10%;
+    padding: 2%; 
 }
 
+.error-message p  {
+    color: red;
+    display: flex;
+    flex-direction: row;
+}
 .links {
     font-size: 20px;
     font-weight: 400px;
     display: inline-block;
-    margin-top: 70px;
+    margin-top: 50px;
     width: 500px;
 
 }

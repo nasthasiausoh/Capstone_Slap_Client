@@ -3,11 +3,16 @@ import SignUp from '../components/SignUp'
 import Navbar from '../../navbar/Navbar'
 import Footer from '../../footer/Footer'
 
-const SignUpRoute = () => {
+const SignUpRoute = ({loggedInUser, setLoggedInUser, listOfUsers, setListOfUsers, newUser, setNewUser}) => {
   return (
     <div>
         <Navbar />
-        <SignUp />
+        <SignUp loggedInUser={loggedInUser} 
+        setLoggedInUser={setLoggedInUser}
+        listOfUsers={listOfUsers}
+        setListOfUsers={setListOfUsers} 
+        newUser={newUser}
+        setNewUser={setNewUser} />
         <Footer />
     </div>
   )

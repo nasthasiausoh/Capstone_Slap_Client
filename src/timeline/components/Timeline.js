@@ -1,6 +1,6 @@
 import React from 'react'
 import Slap from '../../slaps/components/Slap'
-import '../TimelineStyles.css'
+
 
 const Timeline = ({listOfSlaps, setListOfSlaps}) => {
 
@@ -14,7 +14,7 @@ const Timeline = ({listOfSlaps, setListOfSlaps}) => {
 
 
   return (
-    <div>
+    <div className='tl-header'>
         <h1>Timeline</h1>
          {slapComponents}
     </div>
