@@ -66,11 +66,24 @@ function App() {
    <>
     <Routes> 
       <Route path='/' element={<HomeRoute/> } />
+
       <Route path='/aboutUs' element={<AboutUsRoute />} />
-      <Route path='/logIn' element={<LogInRoute loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>} />
-      <Route path='/signUp' element={<SignUpRoute/>} />
+
+      <Route path='/logIn' element={<LogInRoute 
+        loggedInUser={loggedInUser} 
+        setLoggedInUser={setLoggedInUser}/>} />
+
+      <Route path='/signUp' element={<SignUpRoute
+        loggedInUser={loggedInUser} 
+        setLoggedInUser={setLoggedInUser}
+        listOfUsers={listOfUsers}
+        setListOfUsers={setListOfUsers} 
+        newUser={newUser}
+        setNewUser={setNewUser} />} />
+
       <Route path='/timeline' element={<TimelineRoute 
         listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} />} />
+
     </Routes>
    </>
   );

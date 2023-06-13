@@ -11,6 +11,8 @@
 .tl-header{
     padding-top: 200px;
     font-weight: 40px;
+    width: 100%;
+    height: 90%;
 }
 
 .tl-header h1{
