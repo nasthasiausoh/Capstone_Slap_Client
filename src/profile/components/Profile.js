@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../ProfileStyles.css'
+import Player from '../../profile/components/Player'
+import SlapForm from '../../slaps/components/SlapForm';
 
 const Profile = ({user}) => {
 
@@ -13,6 +15,9 @@ const Profile = ({user}) => {
           <p>{user.slaps[0].mood}</p>
           {/* <ul>{user.followers}</ul>
           <ul>{user.following}</ul> */}
+          <Player/>
+          <SlapForm user={user}/>
+          
           
         </div>
       );
