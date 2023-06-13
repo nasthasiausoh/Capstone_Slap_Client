@@ -1,5 +1,6 @@
 import React from 'react'
 import '../SlapStyles.css'
+import Player from './Player'
 
 const Slap = ({slap, listOfSlaps, setListOfSlaps}) => {
 
@@ -10,6 +11,7 @@ const Slap = ({slap, listOfSlaps, setListOfSlaps}) => {
           <p>{slap.message}</p>
           <p> Mood: {slap.mood}</p> 
           <p>{slap.dateTime}</p>
+          <Player/>
       </div>
     </>
   )
