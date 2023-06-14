@@ -3,6 +3,7 @@ import '../SlapStyles.css'
 import Player from './Player'
 import { Link } from 'react-router-dom'
 
+
 const Slap = ({slap}) => {
 
   return (

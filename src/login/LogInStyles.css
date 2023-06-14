@@ -57,7 +57,7 @@ input{
     cursor: pointer;
 }
 
-button {
+.login-button button {
     width: 100px;
     border:none;
     height: 45px;
@@ -66,6 +66,11 @@ button {
     background-color: #EF9645;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.login-button button:hover {
+    width: 130px;
+    height: 50px;
 }
 
 .login-button {
