@@ -19,7 +19,7 @@ const Player = () => {
     };
 
     return ( 
-        <div className="component">
+        <div className="player-scomponent">
         <h2>Playing Now</h2>
         <img
           className="musicCover"
