@@ -5,7 +5,7 @@ import slapLogo from '../assets/the-blue-slap-logo.png'
 
 import './UserNavbarStyles.css'
 
-const UserNavbar = ({user, setUser, loggedInUser}) => {
+const UserNavbar = ({loggedInUser, setLoggedInUser}) => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 

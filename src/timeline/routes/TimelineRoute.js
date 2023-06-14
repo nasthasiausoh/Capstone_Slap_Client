@@ -6,8 +6,8 @@ import UserNavbar from '../../navbar/UserNavbar';
 const TimelineRoute = ({ listOfSlaps, setListOfSlaps, loggedInUser, setLoggedInUser }) => {
   return (
     <div>
-      {loggedInUser ? <UserNavbar user={loggedInUser} setUser={setLoggedInUser} loggedInUser={loggedInUser} /> : <Navbar />}
-      <TimelineContainer listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} />
+      {loggedInUser ? <UserNavbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/> : <Navbar />}
+      <TimelineContainer listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
     </div>
   );
 };

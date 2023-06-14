@@ -2,7 +2,7 @@ import React from 'react'
 import Slap from '../../slaps/components/Slap'
 
 
-const Timeline = ({listOfSlaps, setListOfSlaps}) => {
+const Timeline = ({listOfSlaps, setListOfSlaps, loggedInUser, setLoggedInUser}) => {
 
     const slapComponents = listOfSlaps.map((slap) => {
         return (
@@ -15,7 +15,7 @@ const Timeline = ({listOfSlaps, setListOfSlaps}) => {
 
   return (
     <section className='tl-section'>
-        <h1>Timeline</h1>
+        <h1><i>{loggedInUser.username}</i> 's Timeline</h1>
         <div>
           {slapComponents}
         </div>

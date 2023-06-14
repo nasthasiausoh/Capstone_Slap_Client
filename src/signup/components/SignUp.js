@@ -4,7 +4,7 @@ import { FaMailBulk, FaLock } from 'react-icons/fa';
 import '../SignUpStyles.css';
 import { Link, useNavigate } from 'react-router-dom';
 
-const SignUp = ({ setLoggedInUser }) => {
+const SignUp = ({ loggedInUser, setLoggedInUser, listOfUsers, setListOfUsers }) => {
   const [newUser, setNewUser] = useState({
     username: '',
     password: '',
@@ -45,6 +45,15 @@ const SignUp = ({ setLoggedInUser }) => {
       errors.confirmPassword = 'Passwords do not match';
     }
 
+    if (listOfUsers.find(user => user.username === newUser.username)) {
+      formIsValid = false;
+      errors.username = 'Username already exists';
+    }
+    if (listOfUsers.find(user => user.email === newUser.email)) {
+      formIsValid = false;
+      errors.email = 'Email already exists';
+    }
+    
     setErrors(errors);
     return formIsValid;
   };
@@ -56,23 +65,23 @@ const SignUp = ({ setLoggedInUser }) => {
       bio: newUser.bio,
       email: newUser.email
     };
-
+  
     const response = await fetch('http://localhost:8080/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(signUpData)
     });
-
+  
     if (response.ok) {
-      const authenticatedNewUser = await response.json();
-      setLoggedInUser(authenticatedNewUser);
+      const createdUser = await response.json();
+      setLoggedInUser(createdUser);
       // Redirect to the profile page
-      navigate(`/profile/${authenticatedNewUser.id}`);
+      navigate(`/profile/${createdUser.id}`);
     } else {
       setErrorMessage('Error signing up');
     }
   };
-
+  
   const handleSignUpSubmit = (event) => {
     event.preventDefault();
 
