@@ -14,8 +14,6 @@ const Slap = ({slap}) => {
           <p>{slap.message}</p>
           <p> Mood: {slap.mood}</p> 
           <p>Time Posted: {slap.dateTime}</p>
-          <p>hello</p>
-        
       </div>
     </>
   )
