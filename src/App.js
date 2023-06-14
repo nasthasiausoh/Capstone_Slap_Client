@@ -15,7 +15,6 @@ import ProfileRoute from './profile/routes/ProfileRoute';
 function App() {
 
   const [loggedInUser, setLoggedInUser] = useState (null);
-  const [newUser, setNewUser] = useState("");
   const [listOfUsers, setListOfUsers] = useState([]);
   const [userById, setUserById] = useState ("");
   const [listOfSlaps, setListOfSlaps] = useState([]);
@@ -69,11 +68,13 @@ function App() {
         />
 
         <Route
-          path="/timeline"
+          path={loggedInUser ? "/timeline/:id" : "/timeline"}
           element={
             <TimelineRoute
               listOfSlaps={listOfSlaps}
               setListOfSlaps={setListOfSlaps}
+              loggedInUser={loggedInUser}
+              setLoggedInUser={setLoggedInUser}
             />
           }
         />

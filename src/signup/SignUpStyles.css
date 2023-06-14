@@ -8,6 +8,12 @@
     margin-bottom: 5%;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .signin-form {
     display: flex;
     justify-content: center;
@@ -45,7 +51,7 @@
 }
 
 input{
-    width: 400px;
+    width: 500px;
     height: 50px;
     border: none;
     border-radius: 20px;
@@ -54,6 +60,11 @@ input{
     padding-left: 30px;
     font-size: 20px;
     cursor: pointer;
+}
+
+input:hover {
+    font-size: larger;
+    font-weight: bolder;
 }
 
 button {
@@ -67,9 +78,16 @@ button {
     font-weight: bold;
 }
 
-.signin-button {
-    padding: 30%; 
+button:hover {
+    width: 130px;
+    height: 50px;
 }
+.login-link-from-signup{
+    color: rgb(38, 51, 130);
+    text-decoration: underline;
+    text-decoration-color: #EF9645;
+}
+
 
 .terms {
     font-size: 1.4rem;
@@ -77,8 +95,6 @@ button {
     display: inline-block;
     margin-top: 40px;
     width: 500px;
-    text-decoration: underline;
-    text-decoration-color: #EF9645;
 }
 
 .terms p {
