@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import useSound from "use-sound"; //handles sound
-import Snooze from "../../assets/Music/Snooze.mp3"; // gets mp3 from assets
 import {AiFillPlayCircle, AiFillPauseCircle} from "react-icons/ai";// icons for play and pause
 import { IconContext } from "react-icons"; //customising icons
 
@@ -19,7 +18,7 @@ export default function Player() {
 
   const [seconds, setSeconds] = useState(); // current position of the audio in seconds
 
-  const [play, { pause, duration, sound }] = useSound(Snooze);
+  const [play, { pause, duration, sound }] = useSound("../../../Music/As It Was.mp3");
 
 
   useEffect(() => {
@@ -60,10 +59,13 @@ export default function Player() {
     }
   };
 
+  const handleSliderChange = (e) => {
+    sound.seek([e.target.value]);
+  }
 
   return (
     <div className="player-component">
-      <h2>Playing Now</h2>
+      <h2>Listening To</h2>
        <img className="musicCover" src="https://cdns-images.dzcdn.net/images/cover/a3c3b409f0d5bd781821ec0fd79d5b15/350x350.jpg" />
       
       <div>
@@ -73,12 +75,8 @@ export default function Player() {
       
       <div>
         <div className="time">
-          <p>
-            {currTime.min}:{currTime.sec}
-          </p>
-          <p>
-            {time.min}:{time.sec}
-          </p>
+          <p>{currTime.min}:{currTime.sec}</p>
+          <p>{time.min}:{time.sec}</p>
         </div>
         <input
           type="range"
@@ -87,28 +85,26 @@ export default function Player() {
           default="0"
           value={seconds}
           className="timeline"
-          onChange={(e) => {
-            sound.seek([e.target.value]);
-          }}
+          onChange={handleSliderChange}
         />
       </div>
       
-      <div>
+      <div className="music-buttons">
         {!isPlaying ? (
           <button className="playButton" onClick={playingButton}>
-            <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
+            <IconContext.Provider value={{ size: "3em", color: "orange" }}>
               <AiFillPlayCircle />
             </IconContext.Provider>
           </button>
         ) : (
           <button className="playButton" onClick={playingButton}>
-            <IconContext.Provider value={{ size: "3em", color: "#27AE60" }}>
+            <IconContext.Provider value={{ size: "3em", color: "orange" }}>
               <AiFillPauseCircle />
             </IconContext.Provider>
           </button>
         )}
       </div>
-      
+
     </div>
   );
 }

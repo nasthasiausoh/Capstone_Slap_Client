@@ -7,44 +7,45 @@
 }
 
 .player-component {
-  background-color: white;
-  width: 25%;
-  max-width: 600px;
-  margin: 1em auto;
-  padding-bottom: 2em;
-  border: 0.1px solid black;
-  border-radius: 10px;
+    background-color: beige;
+    width: 25%;
+    max-width: 600px;
+    margin: 1em auto;
+    padding-bottom: 2em;
+    border: 0.1px solid black;
+    border-radius: 10px;
 }
 
 .musicCover {
-  border-radius: 10%;
+    border-radius: 10%;
 }
 
 .playButton {
-  background: none;
-  border: none;
-  align-items: center;
-  justify-content: center;
+    border: none;
+    align-items: center;
+    box-shadow: none;
+    width: 3em;
 }
+
 
 .songTitle {
     font-size: xx-large;
-    color: #4f4f4f;
-    padding-bottom: 10px;;
+    color: black;
+    padding-bottom: 15px;;
 }
 
 .artistSubTitle {
-  margin-top: -1em;
-  color: #4f4f4f;
+    margin-top: -1em;
+    color: black;
 }
 
 .time {
-  margin: 0 auto;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  color: black;
-  font-size: smaller;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: smaller;
 }
 
 .time p{
@@ -52,17 +53,19 @@
 }
 
 .timeline {
-  width: 80%;
-  background-color: #27ae60;
-  color: black;
+    width: 80%;
+    background-color: #27ae60;
+    box-shadow: none;
+    padding-left: 0;
 }
 
+
 input[type="range"] {
-  background-color: #27ae60;
+    background-color: #27ae60;
 }
 
 @media (max-width: 900px) {
-  .component {
-    width: 50%;
-  }
+    .player-component {
+        width: 50%;
+    }
 }
