@@ -15,7 +15,7 @@ const Timeline = ({listOfSlaps, setListOfSlaps, loggedInUser, setLoggedInUser}) 
 
   return (
     <section className='tl-section'>
-        <h1><i>{loggedInUser.username}</i> 's Timeline</h1>
+       {loggedInUser ? <h1><i>{loggedInUser.username}</i> 's Timeline </h1> : <h1>Timeline</h1> }
         <div>
           {slapComponents}
         </div>
