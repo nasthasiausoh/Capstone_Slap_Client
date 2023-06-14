@@ -4,7 +4,7 @@ import { FaMailBulk, FaLock } from 'react-icons/fa';
 import '../SignUpStyles.css';
 import { Link, useNavigate } from 'react-router-dom';
 
-const SignUp = ({ setLoggedInUser }) => {
+const SignUp = ({ loggedInUser, setLoggedInUser, listOfUsers, setListOfUsers }) => {
   const [newUser, setNewUser] = useState({
     username: '',
     password: '',
@@ -44,6 +44,16 @@ const SignUp = ({ setLoggedInUser }) => {
       formIsValid = false;
       errors.confirmPassword = 'Passwords do not match';
     }
+
+    if (listOfUsers.find(user => user.username === newUser.username)) {
+      formIsValid = false;
+      errors.username = 'Username already exists';
+    }
+    if (listOfUsers.find(user => user.email === newUser.email)) {
+      formIsValid = false;
+      errors.email = 'Email already exists';
+    }
+    
 
     setErrors(errors);
     return formIsValid;
