@@ -2,5 +2,42 @@
     display: flex;
     flex-direction: column;
     padding-top: 15%;
+    padding-bottom: 5%;
     align-items: center;
+    background-color: rgb(59, 70, 139);
+}
+
+.bio-profile-picture {
+    display: flex;
+    align-items: flex-start;
+}
+
+.bio-profile-picture img {
+    border-radius: 50px;
+}
+
+.profile-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 
+.profile-details h1 {
+    margin: 30px;
+    /* margin-left: 30px; */
+    /* margin-top: 30px; */
+    font-size: 2.5rem;
+}
+
+#follow-button {
+    margin-left: 30px;
+}
+
+#user-bio {
+    font-size: 1.6rem;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+
+.bio-button {
+    margin-left: 10px;
 }

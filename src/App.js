@@ -69,11 +69,13 @@ function App() {
         />
 
         <Route
-          path="/timeline"
+          path={loggedInUser ? "/timeline/:id" : "/timeline"}
           element={
             <TimelineRoute
               listOfSlaps={listOfSlaps}
               setListOfSlaps={setListOfSlaps}
+              loggedInUser={loggedInUser}
+              setLoggedInUser={setLoggedInUser}
             />
           }
         />
