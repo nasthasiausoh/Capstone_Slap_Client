@@ -1,19 +1,15 @@
-import React from 'react'
-import Navbar from '../../navbar/Navbar'
-import TimelineContainer from '../containers/TimelineContainer'
-import Footer from '../../footer/Footer'
+import React from 'react';
+import Navbar from '../../navbar/Navbar';
+import TimelineContainer from '../containers/TimelineContainer';
+import UserNavbar from '../../navbar/UserNavbar';
 
-const TimelineRoute = ({listOfSlaps, setListOfSlaps}) => {
+const TimelineRoute = ({ listOfSlaps, setListOfSlaps, loggedInUser, setLoggedInUser }) => {
   return (
     <div>
-        <Navbar />
-        <TimelineContainer 
-        listOfSlaps={listOfSlaps} 
-        setListOfSlaps={setListOfSlaps} />
-        <Footer />
-        
+      {loggedInUser ? <UserNavbar user={loggedInUser} setUser={setLoggedInUser} loggedInUser={loggedInUser} /> : <Navbar />}
+      <TimelineContainer listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} />
     </div>
-  )
-}
+  );
+};
 
-export default TimelineRoute
+export default TimelineRoute;
