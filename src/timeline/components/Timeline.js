@@ -14,10 +14,13 @@ const Timeline = ({listOfSlaps, setListOfSlaps}) => {
 
 
   return (
-    <div className='tl-header'>
+    <section className='tl-section'>
         <h1>Timeline</h1>
-         {slapComponents}
-    </div>
+        <div>
+          {slapComponents}
+        </div>
+         
+    </section>
   )
 }
 
