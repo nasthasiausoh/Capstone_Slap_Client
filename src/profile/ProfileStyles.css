@@ -31,6 +31,14 @@
 
 #follow-button {
     margin-left: 30px;
+    width: 120px;
+    border: none;
+    height: 45px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: #EF9645;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 #user-bio {
@@ -41,6 +49,14 @@
 
 .bio-button {
     margin-left: 10px;
+        width: 120px;
+    border: none;
+    height: 45px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: #EF9645;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 
@@ -69,6 +85,7 @@
     box-shadow: none;
     width: 3em;
     height: 3em;
+    background-color: beige;;
 }
 
 .songTitle {

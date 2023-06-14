@@ -6,8 +6,10 @@ import {Music} from "../../assets/Music.js"
 
 export default function Player() {
 
-  const [listOfSongs, setListOfSongs] = useState(Music);
-  const [selectedSong, setSelectedSong] = useState(null);
+  const randomValue = Math.floor(Math.random() * Music.length);
+
+  const [selectedSong, setSelectedSong] = useState();
+  const [playingSong, setPlayingSong] = useState(Music[randomValue]);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [time, setTime] = useState({
@@ -22,7 +24,8 @@ export default function Player() {
 
   const [seconds, setSeconds] = useState(); // current position of the audio in seconds
 
-  const [play, { pause, duration, sound }] = useSound(Music[0].audio_path);
+  const [play, { pause, duration, sound }] = useSound(playingSong.audio_path);
+
 
 
   useEffect(() => {
@@ -52,6 +55,14 @@ export default function Player() {
     return () => clearInterval(interval);
   }, [sound]);
 
+  
+  useEffect(() => {
+    if (isPlaying) {
+      pause(); //pauses audio
+      setIsPlaying(false);
+    }
+  }, [playingSong])
+
 
   const playingButton = () => {
     if (isPlaying) {
@@ -66,23 +77,41 @@ export default function Player() {
   const handleSliderChange = (e) => {
     sound.seek([e.target.value]);
   }
+  
 
-  const chooseSong = () => {
-
+  const handleSelectSong = (e) => {
+    selectSong(e);
+    changeSong(e);
   }
+
+  const selectSong = (e) => {
+    setSelectedSong(e.target.value);
+    // console.log(selectedSong);
+  }
+
+  const changeSong = (e) => {
+    const foundSong = Music.find(Music => Music.title === e.target.value);
+    setPlayingSong(foundSong);
+    console.log(playingSong);
+  }
+
+
+
 
   return (
     <div className="player-component">
       <div className="select-component">
-        <option>apple</option>
+        <select value={selectedSong} onChange={handleSelectSong}>
+        {Music.map(({title}) => <option value={title}> {title} </option>)}
+        </select>
       </div>
 
       <h2>Listening To</h2>
-      <img className="musicImage" src={Music[0].image_path} />
+      <img className="musicImage" src={playingSong.image_path} />
       
       <div>
-        <h3 className="songTitle">{Music[0].title}</h3>
-        <p className="artistSubTitle">{Music[0].artist}</p>
+        <h3 className="songTitle">{playingSong.title}</h3>
+        <p className="artistSubTitle">{playingSong.artist}</p>
       </div>
       
       <div>
