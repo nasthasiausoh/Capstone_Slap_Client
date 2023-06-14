@@ -2,8 +2,12 @@ import { useEffect, useState } from "react";
 import useSound from "use-sound"; //handles sound
 import {AiFillPlayCircle, AiFillPauseCircle} from "react-icons/ai";// icons for play and pause
 import { IconContext } from "react-icons"; //customising icons
+import {Music} from "../../assets/Music.js"
 
 export default function Player() {
+
+  const [listOfSongs, setListOfSongs] = useState(Music);
+  const [selectedSong, setSelectedSong] = useState(null);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [time, setTime] = useState({
@@ -18,7 +22,7 @@ export default function Player() {
 
   const [seconds, setSeconds] = useState(); // current position of the audio in seconds
 
-  const [play, { pause, duration, sound }] = useSound("../../../Music/As It Was.mp3");
+  const [play, { pause, duration, sound }] = useSound(Music[0].audio_path);
 
 
   useEffect(() => {
@@ -63,14 +67,22 @@ export default function Player() {
     sound.seek([e.target.value]);
   }
 
+  const chooseSong = () => {
+
+  }
+
   return (
     <div className="player-component">
+      <div className="select-component">
+        <option>apple</option>
+      </div>
+
       <h2>Listening To</h2>
-       <img className="musicCover" src="https://cdns-images.dzcdn.net/images/cover/a3c3b409f0d5bd781821ec0fd79d5b15/350x350.jpg" />
+      <img className="musicImage" src={Music[0].image_path} />
       
       <div>
-        <h3 className="songTitle">Snooze</h3>
-        <p className="artistSubTitle">SZA</p>
+        <h3 className="songTitle">{Music[0].title}</h3>
+        <p className="artistSubTitle">{Music[0].artist}</p>
       </div>
       
       <div>
