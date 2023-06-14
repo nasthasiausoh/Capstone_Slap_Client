@@ -1,6 +1,5 @@
 import React from 'react'
 import '../SlapStyles.css'
-import Player from './Player'
 import { Link } from 'react-router-dom'
 
 
