@@ -3,4 +3,66 @@
     flex-direction: column;
     padding-top: 15%;
     align-items: center;
+    text-align: center;
+}
+
+.player-component {
+  background-color: white;
+  width: 25%;
+  max-width: 600px;
+  margin: 1em auto;
+  padding-bottom: 2em;
+  border: 0.1px solid black;
+  border-radius: 10px;
+}
+
+.musicCover {
+  border-radius: 10%;
+}
+
+.playButton {
+  background: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.songTitle {
+    font-size: xx-large;
+    color: #4f4f4f;
+    padding-bottom: 10px;;
+}
+
+.artistSubTitle {
+  margin-top: -1em;
+  color: #4f4f4f;
+}
+
+.time {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-size: smaller;
+}
+
+.time p{
+    color: black;
+}
+
+.timeline {
+  width: 80%;
+  background-color: #27ae60;
+  color: black;
+}
+
+input[type="range"] {
+  background-color: #27ae60;
+}
+
+@media (max-width: 900px) {
+  .component {
+    width: 50%;
+  }
 }
