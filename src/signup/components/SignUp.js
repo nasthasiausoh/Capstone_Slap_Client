@@ -54,7 +54,6 @@ const SignUp = ({ loggedInUser, setLoggedInUser, listOfUsers, setListOfUsers }) 
       errors.email = 'Email already exists';
     }
     
-
     setErrors(errors);
     return formIsValid;
   };
@@ -66,23 +65,23 @@ const SignUp = ({ loggedInUser, setLoggedInUser, listOfUsers, setListOfUsers }) 
       bio: newUser.bio,
       email: newUser.email
     };
-
+  
     const response = await fetch('http://localhost:8080/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(signUpData)
     });
-
+  
     if (response.ok) {
-      const authenticatedNewUser = await response.json();
-      setLoggedInUser(authenticatedNewUser);
+      const createdUser = await response.json();
+      setLoggedInUser(createdUser);
       // Redirect to the profile page
-      navigate(`/profile/${authenticatedNewUser.id}`);
+      navigate(`/profile/${createdUser.id}`);
     } else {
       setErrorMessage('Error signing up');
     }
   };
-
+  
   const handleSignUpSubmit = (event) => {
     event.preventDefault();
 

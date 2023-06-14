@@ -15,7 +15,6 @@ import ProfileRoute from './profile/routes/ProfileRoute';
 function App() {
 
   const [loggedInUser, setLoggedInUser] = useState (null);
-  const [newUser, setNewUser] = useState("");
   const [listOfUsers, setListOfUsers] = useState([]);
   const [userById, setUserById] = useState ("");
   const [listOfSlaps, setListOfSlaps] = useState([]);
