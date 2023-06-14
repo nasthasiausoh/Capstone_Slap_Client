@@ -104,13 +104,13 @@ export default function Player() {
       <div className="music-buttons">
         {!isPlaying ? (
           <button className="playButton" onClick={playingButton}>
-            <IconContext.Provider value={{ size: "3em", color: "orange" }}>
+            <IconContext.Provider value={{ size: "3em", color: "green" }}>
               <AiFillPlayCircle />
             </IconContext.Provider>
           </button>
         ) : (
           <button className="playButton" onClick={playingButton}>
-            <IconContext.Provider value={{ size: "3em", color: "orange" }}>
+            <IconContext.Provider value={{ size: "3em", color: "green" }}>
               <AiFillPauseCircle />
             </IconContext.Provider>
           </button>
