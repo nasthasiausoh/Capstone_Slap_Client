@@ -3,11 +3,11 @@ import Navbar from '../../navbar/Navbar';
 import TimelineContainer from '../containers/TimelineContainer';
 import UserNavbar from '../../navbar/UserNavbar';
 
-const TimelineRoute = ({ listOfSlaps, setListOfSlaps, loggedInUser, setLoggedInUser }) => {
+const TimelineRoute = ({ listOfSlaps, setListOfSlaps, loggedInUser, setLoggedInUser, listOfUsers, setListOfUsers}) => {
   return (
     <div>
-      {loggedInUser ? <UserNavbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/> : <Navbar />}
-      <TimelineContainer listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
+      {loggedInUser ? <UserNavbar user={loggedInUser} setUser={setLoggedInUser} loggedInUser={loggedInUser}/> : <Navbar />}
+      <TimelineContainer listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} listOfUsers={listOfUsers} setListOfUsers={setListOfUsers} loggedInUser={loggedInUser}/>
     </div>
   );
 };

@@ -75,6 +75,8 @@ function App() {
               setListOfSlaps={setListOfSlaps}
               loggedInUser={loggedInUser}
               setLoggedInUser={setLoggedInUser}
+              listOfUsers={listOfUsers}
+              setListOfUsers={setListOfUsers}
             />
           }
         />
