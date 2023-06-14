@@ -22,3 +22,32 @@
     font-size: 3.5rem;
     margin-left: 30px;
 }
+
+.timeline-heading-contents {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+.timeline-heading-contents h1 {
+    padding-right: 20px;
+}
+
+#filter-timeline-slaps-button {
+    height: 70px;
+    width: 250px;
+    font-size: 1.4rem;
+    border-radius: 100px;
+
+}
+
+.user-search input {
+    margin-left: 3%;
+    height: 70px;
+    border-radius: 100px;
+}
+
+.user-search input:hover {
+    font-size: 1.4rem;
+}

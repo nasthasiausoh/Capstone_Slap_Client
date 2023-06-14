@@ -36,7 +36,7 @@ const FollowButton = ({ loggedInUser, user }) => {
 
   return (
     !isCurrentUser && (
-      <button onClick={handleFollow}>
+      <button onClick={handleFollow} id='follow-unfollow-update-bio-button'>
         {isFollowing ? 'Unfollow' : 'Follow'}
       </button>
     )
