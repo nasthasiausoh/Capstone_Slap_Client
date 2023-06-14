@@ -1,36 +1,28 @@
-import { useState } from "react";
-import Picker from "@emoji-mart/react";
-import data from "@emoji-mart/data";
+// import { Modal } from "@mui/base";
+// import { Box } from "@mui/system"
+// import { useState } from "react";
 
-const SlapForm = ({ user }) => {
 
-  const [isPickerVisible, setPickerVisible] = useState(false);
-  const [currentEmoji, setCurrentEmoji] = useState(null);
+// const SlapForm = ({loggedInUser}) => {
 
-  const handleTogglePicker = () => setPickerVisible(!isPickerVisible);
+//     const[message, setMessage]= useState('');
+//     const [mood, setMood] = useState('')
 
-  return (
-    <div className="emoji-picker">
-      <h1>{currentEmoji || "mood:"}</h1>
-      <button
-        className="emoji"
-        onClick={handleTogglePicker}
-      >
-        mood
-      </button>
+//     return ( 
+//     <div>
+//         <form onSubmit={handleSubmit}>
+//             <input 
+//             type="text"
+//             value={message}
+//             onChange={(event) => setMood(event.target.value)}
+//             />
+//             <input
+//             type="text"
+//             value={}/>
+//         </form>
 
-      <div className={isPickerVisible ? "d-block" : "d-none"}>
-        <Picker
-          data={data}
-          previewPosition="none"
-          onEmojiSelect={(e) => {
-            setCurrentEmoji(e.native);
-            // setPickerVisible(!isPickerVisible);
-          }}
-        />
-      </div>
-    </div>
-  );
-};
+//     </div> );
+// }
+ 
+// export default SlapForm;
 
-export default SlapForm;
