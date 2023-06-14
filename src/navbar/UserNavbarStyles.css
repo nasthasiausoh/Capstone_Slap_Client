@@ -1,4 +1,4 @@
-.header {
+.user-header {
     position: absolute;
     width: 100%;
     height: 90px;
@@ -25,11 +25,6 @@
     height: 300px;
     width: 300px;
 }
-
-.slap-logo:hover {
-    height: 290px;
-    width: 290px;
-}
 .nav-menu {
     display: flex;
 }
@@ -45,9 +40,8 @@
 
 .nav-menu a:hover {
     text-decoration: underline;
+    /* color: #0087ca; */
     color: orange;
-    font-weight: bolder;
-    font-size: 2.5rem;
 }
 
 .hamburger {

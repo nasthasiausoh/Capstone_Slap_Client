@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaMailBulk, FaLock } from 'react-icons/fa';
 
 import '../SignUpStyles.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignUp = ({ setLoggedInUser }) => {
   const [newUser, setNewUser] = useState({
@@ -165,7 +165,7 @@ const SignUp = ({ setLoggedInUser }) => {
           {errorMessage && <p className="error-message">{errorMessage}</p>}
 
           <div className="terms">
-            <p>Terms and Conditions</p>
+            <p>Already have an account? <Link to="/login" className='login-link-from-signup'>Log in</Link></p>
           </div>
         </div>
       </section>

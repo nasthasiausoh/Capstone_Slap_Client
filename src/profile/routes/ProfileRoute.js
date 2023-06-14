@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../../footer/Footer';
 import Profile from '../components/Profile';
-import Navbar from '../../navbar/Navbar';
+import UserNavbar from '../../navbar/UserNavbar';
 
 const ProfileRoute = ({ loggedInUser }) => {
     const [user, setUser] = useState(null);
@@ -28,7 +28,7 @@ const ProfileRoute = ({ loggedInUser }) => {
 
     return (
         <div>
-          <Navbar />
+          <UserNavbar user={user} setUser={setUser} loggedInUser={loggedInUser}/>
             {user ? <Profile user={user} /> : <p>Loading user profile...</p>}
             < Footer/>
         </div>
