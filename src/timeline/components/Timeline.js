@@ -26,21 +26,14 @@ const Timeline = ({
       />;
     });
 
-  return (
-    <section className='tl-section'>
-        {loggedInUser ? <h1><i>{loggedInUser.username}</i> 's Timeline </h1> : <h1>Timeline</h1> }
-          <div>
-            {slapComponents}
-          </div>
-          
+  return (        
       <section className="tl-section">
-        <h1>Timeline</h1>
-        <button onClick={handleFilterByFollowing}>
+      {loggedInUser ? <h1><i>{loggedInUser.username}</i> 's Timeline </h1> : <h1>Timeline</h1> }
+        {loggedInUser ? <button onClick={handleFilterByFollowing}>
           {showOnlyFollowing ? "Show All Slaps" : "Filter by Friends"}
-        </button>
+        </button> : <h3> General Feed</h3> }
         <div>{slapComponents}</div>
       </section>
-    </section>
 
   );
 };
