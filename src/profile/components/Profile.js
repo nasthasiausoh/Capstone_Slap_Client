@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import '../ProfileStyles.css'
+import ProfileSlapList from './ProfileSlapList';
 
 const Profile = ({user}) => {
+
+  const userSlapComponents = user.slaps.map((userSlap) => {
+    return (
+        <ProfileSlapList userSlap = {userSlap}
+         user={user}  />
+    );
+})
 
     return (
       <div>
@@ -17,6 +25,10 @@ const Profile = ({user}) => {
                 </div>
             </div>
         </section>
+
+        <div>
+           {userSlapComponents}
+        </div>
 
             {/* ADD LIST OF SLAPS HERE */}
             {/* <p>{user.slaps}</p> */}
