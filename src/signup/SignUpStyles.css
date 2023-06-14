@@ -67,7 +67,7 @@ input:hover {
     font-weight: bolder;
 }
 
-.signin-button {
+.signin-button button{
     width: 120px;
     border: none;
     height: 45px;
@@ -78,7 +78,7 @@ input:hover {
     font-weight: bold;
 }
 
-.signin-button:hover {
+.signin-button button:hover {
     width: 130px;
     height: 50px;
 }
