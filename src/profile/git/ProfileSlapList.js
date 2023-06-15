@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../ProfileStyles.css'
 
 const ProfileSlapList = ({user, userSlap, loggedInUser, deleteSlap}) => {
 

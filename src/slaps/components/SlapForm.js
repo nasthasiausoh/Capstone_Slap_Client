@@ -45,7 +45,7 @@ const SlapForm = ({loggedInUser, addNewSlap}) => {
 
                 <input
                   type="text"
-                  placeholder="Select an Emoji"
+                  placeholder="emoji"
                   value={currentEmoji.native}
                   onClick={handleEmojiToggle}
                   id="select-an-emoji"
