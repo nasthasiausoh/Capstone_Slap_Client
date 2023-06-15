@@ -20,6 +20,23 @@ function App() {
   const [listOfSlaps, setListOfSlaps] = useState([]);
   const [newSlap, setNewSlap] = useState({});
 
+  const addNewSlap = async (newSlap) => {
+    await fetch('http://localhost:8080/slaps', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newSlap)
+    });
+    const slapsByUser = await fetch(`http://localhost:8080/slaps/slapFromUser/${loggedInUser.id}`)
+    const updatedSlaps = await slapsByUser.json();
+    const updatedLoggedInUser = {...loggedInUser};
+    updatedLoggedInUser.slaps = updatedSlaps;
+    setLoggedInUser(updatedLoggedInUser);
+    // const data = await response.json()
+    // const updatedSlaps = [...listOfSlaps, data]
+    // setListOfSlaps(updatedSlaps)
+    fetchListOfUsers();
+    fetchListOfSlaps();
+  }
 
   useEffect(() => {
     fetchListOfUsers();
@@ -83,7 +100,7 @@ function App() {
 
         <Route
           path="/profile/:id"
-          element={<ProfileRoute loggedInUser={loggedInUser} />}
+          element={<ProfileRoute loggedInUser={loggedInUser} listOfSlaps={listOfSlaps} addNewSlap={addNewSlap}/>}
         />
       </Routes>
     </>

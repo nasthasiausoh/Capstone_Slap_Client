@@ -4,16 +4,16 @@ import ProfileSlapList from './ProfileSlapList';
 import FollowButton from '../../follow/FollowButton';
 import ConnectionsModal from '../../modals/ConnectionsModal';
 import { BioModal, UsernameModal } from './BioModal';
+import SlapForm from '../../slaps/components/SlapForm';
 
-const Profile = ({ user, loggedInUser }) => {
-  const [showBioModal, setShowBioModal] = useState(false);
-  const [showUsernameModal, setShowUsernameModal] = useState(false);
+const Profile = ({ user, loggedInUser, listOfSlaps, addNewSlap}) => {
   const isCurrentUser = loggedInUser && loggedInUser.id === user.id;
   const initialFollowing = loggedInUser && loggedInUser.following.some((followedUser) => followedUser.id === user.id);
 
   const [showModal, setShowModal] = useState(false);
   const [updatedBio, setUpdatedBio] = useState(loggedInUser.bio); // Keep the updated bio in state
-
+  const [showBioModal, setShowBioModal] = useState(false);
+  const [showUsernameModal, setShowUsernameModal] = useState(false);
   useEffect(() => {
     setUpdatedBio(loggedInUser.bio); // Update the bio when the loggedInUser prop changes
   }, [loggedInUser.bio]);
@@ -32,8 +32,13 @@ const Profile = ({ user, loggedInUser }) => {
     setShowModal(false);
   };
 
+  useEffect( ()=> 
+  {
+  }, [listOfSlaps])
+
   const userSlapComponents = user.slaps.map((userSlap) => {
-    return <ProfileSlapList userSlap={userSlap} user={user} />;
+    return <ProfileSlapList userSlap={userSlap} user={loggedInUser.id === user.id ? loggedInUser : user} />;
+
   });
 
   const handleUpdateBio = async (newBio) => {
@@ -95,6 +100,7 @@ const Profile = ({ user, loggedInUser }) => {
   };
 
   return (
+    <>
     <div>
       <section className="bio-component">
         <div className="profile-details">
@@ -136,6 +142,8 @@ const Profile = ({ user, loggedInUser }) => {
         </div>
       )}
     </div>
+    <SlapForm loggedInUser={loggedInUser} addNewSlap={addNewSlap}/>
+    </>
   );
 };
 
