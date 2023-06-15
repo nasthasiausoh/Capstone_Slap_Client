@@ -75,6 +75,7 @@ input{
     background-color: #49c9f0;
     font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .login-button button:hover {

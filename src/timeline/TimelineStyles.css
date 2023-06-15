@@ -44,7 +44,13 @@
     background-color:  orange;
     border: none;
     color: white;
+    cursor: pointer;
 
+}
+
+#filter-timeline-slaps-button:hover{
+    height: 80px;
+    width: 260px;
 }
 
 .user-search input {
