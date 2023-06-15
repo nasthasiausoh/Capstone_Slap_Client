@@ -19,7 +19,7 @@ const Slap = ({slap}) => {
             </Link>
 
             <p>{slap.message}</p>
-            <p><b>Mood:</b> {slap.mood}</p>
+            <p><b>Mood: </b> {slap.mood}</p>
             <p><b>Time Posted:</b> {slap.dateTime}</p>
            </div>
         </div>

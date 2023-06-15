@@ -52,17 +52,17 @@ const Profile = ({ user, loggedInUser, listOfSlaps, addNewSlap}) => {
             <p id="user-bio">
               <i>{user.bio}</i>
             </p>
-            
+
           </div>
         </div>
       </section>
 
+      <SlapForm loggedInUser={loggedInUser} addNewSlap={addNewSlap}/>
+
       <div className="profile-list-of-slaps">{userSlapComponents}</div>
 
       {showModal && <ConnectionsModal loggedInUser={loggedInUser} user={user} onClose={closeModal} />}
-      <SlapForm />
     </div>
-    <SlapForm loggedInUser={loggedInUser} addNewSlap={addNewSlap}/>
     </>
   );
 };

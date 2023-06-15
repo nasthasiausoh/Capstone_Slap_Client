@@ -1,6 +1,5 @@
-import { Modal } from "@mui/base";
-import { Box } from "@mui/system"
-import { useState } from "react";
+// import { Modal } from "@mui/base";
+// import { Box } from "@mui/system"
 import { useState } from "react";
 import Picker from "@emoji-mart/react";
 import data from "@emoji-mart/data";
@@ -24,14 +23,14 @@ const SlapForm = ({loggedInUser, addNewSlap}) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleAddSlap({ message, mood });
+    handleAddSlap();
     handleCloseModal();
   };
 
   const handleAddSlap = async () => {
     const slapInfo = {
       message: message,
-      mood: mood,
+      mood: currentEmoji.native,
       userId: loggedInUser.id
     };
     addNewSlap(slapInfo)
@@ -40,12 +39,12 @@ const SlapForm = ({loggedInUser, addNewSlap}) => {
   const [isPickerVisible, setPickerVisible] = useState(false);
   const [currentEmoji, setCurrentEmoji] = useState("");
 
-  const handleTogglePicker = () => setPickerVisible(!isPickerVisible);
+  // const handleTogglePicker = () => setPickerVisible(!isPickerVisible);
 
-  const handleEmojiClick = (emojiObject) => {
-  setCurrentEmoji(emojiObject.emoji);
-  setPickerVisible(false);
-  };
+  // const handleEmojiClick = (emojiObject) => {
+  // setCurrentEmoji(emojiObject.emoji);
+  // setPickerVisible(false);
+  // };
 
 
 
@@ -63,7 +62,7 @@ const SlapForm = ({loggedInUser, addNewSlap}) => {
               />
           <input
                 type="text"
-                value={mood}
+                value={currentEmoji.native}
                 onChange={(event) => setMood(event.target.value)}
               />
           <button type="submit">Submit</button>
@@ -71,30 +70,16 @@ const SlapForm = ({loggedInUser, addNewSlap}) => {
           </form>
 
           <div className='d-flex flex-column align-items-center'>
-            <h1 className='mt-5 mb-5'>{currentEmoji || 'select emoji' }</h1>
+            <h1 className='mt-5 mb-5'>{currentEmoji.native || 'select emoji' }</h1>
             <button className='btn btn-primary' onClick={() => setPickerVisible(!isPickerVisible)}> open emoji picker</button>
             <div className={isPickerVisible ? 'd-block' : 'd-none'}>
               <Picker
               data ={data}
               previewPosition="none"
               onEmojiSelect={(e) => {
-              setCurrentEmoji(e.native)
+              setCurrentEmoji(e)
               setPickerVisible(!isPickerVisible);
               }}/>
-            </div>
-
-            <div className="emoji-picker">
-              <h1>HI FROM SLAP FORM</h1>
-              <button className="emoji-picker-toggle" onClick={handleTogglePicker}>
-                {currentEmoji ? (<span role="img" aria-label="Selected Emoji">{currentEmoji}</span>) : ('Select Emoji')}
-              </button>
-                {isPickerVisible && (
-                  <Picker
-                  onEmojiClick={handleEmojiClick}
-                  disableSearchBar
-                  disableSkinTonePicker
-                  />
-              )}
             </div>
 
           </div> 
