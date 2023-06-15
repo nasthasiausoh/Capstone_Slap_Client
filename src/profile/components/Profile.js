@@ -3,6 +3,7 @@ import '../ProfileStyles.css';
 import ProfileSlapList from './ProfileSlapList';
 import FollowButton from '../../follow/FollowButton';
 import ConnectionsModal from '../../modals/ConnectionsModal';
+import SlapForm from '../../slaps/components/SlapForm';
 
 const Profile = ({ user, loggedInUser }) => {
   const isCurrentUser = loggedInUser && loggedInUser.id === user.id;
@@ -49,6 +50,7 @@ const Profile = ({ user, loggedInUser }) => {
       <div className="profile-list-of-slaps">{userSlapComponents}</div>
 
       {showModal && <ConnectionsModal loggedInUser={loggedInUser} user={user} onClose={closeModal} />}
+      <SlapForm />
     </div>
   );
 };
