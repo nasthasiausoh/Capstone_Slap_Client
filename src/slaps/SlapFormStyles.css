@@ -15,10 +15,11 @@
     height: 50px;
     border-radius: 18px;
     margin-top: 1%;
+    margin-bottom: 2%;
     color: white;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
-    background-color: orange;
-    font-size: 1.2rem;
+    background-color: rgb(59, 70, 139);
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
