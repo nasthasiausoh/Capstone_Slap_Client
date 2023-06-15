@@ -9,6 +9,7 @@ const Slap = ({ slap, loggedInUser }) => {
   const time = slap.dateTime.slice(11, 16);
 
   return (
+    <div className='"player-component"'>
     <div className="timeline-list-of-slaps">
       <div className="timeline-slap-component">
         <div className="timeline-user-profile-details">
@@ -27,6 +28,7 @@ const Slap = ({ slap, loggedInUser }) => {
            </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

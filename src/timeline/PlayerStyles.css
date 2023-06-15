@@ -11,6 +11,11 @@
     text-align: center;
 }
 
+.player-component {
+    position: sticky;
+    top:0 ;
+}
+
 .player-component h2 {
     padding: .8rem;
     color: rgb(59, 70, 139);
