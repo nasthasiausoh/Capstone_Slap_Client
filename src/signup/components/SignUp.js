@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaMailBulk, FaLock } from 'react-icons/fa';
+import { FaMailBulk, FaLock, FaUser } from 'react-icons/fa';
 
 import '../SignUpStyles.css';
 import { Link, useNavigate } from 'react-router-dom';
@@ -123,7 +123,7 @@ const SignUp = ({ loggedInUser, setLoggedInUser, listOfUsers, setListOfUsers }) 
 
             <section className="username-section">
               <h4>
-                <FaMailBulk size={40} style={{ color: 'black', marginRight: '2rem' }} />
+                <FaUser size={40} style={{ color: 'black', marginRight: '2rem' }} />
               </h4>
               <input
                 type="text"

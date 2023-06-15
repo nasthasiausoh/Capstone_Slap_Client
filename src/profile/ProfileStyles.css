@@ -84,13 +84,14 @@ button:hover{
 #follow-unfollow-update-bio-button {
     margin-left: 40px;
     margin-right: 10px;
-    width: 190px;
+    width: 200px;
     font-size: 1.4rem;
     font-weight: 100;
     height: 68px;
     background-color: rgb(59, 70, 139);
     border-radius: 100px;
     cursor:pointer;
+    font-weight: bold;
 
 }
 
