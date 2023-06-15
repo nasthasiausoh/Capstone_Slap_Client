@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 
 const ProfileSlapList = ({user, userSlap, loggedInUser, deleteSlap}) => {
 
-  const handleDelete = () => {
-    deleteSlap(userSlap.id)
-  }
+  const date = userSlap.dateTime.slice(0, 10).split("-").reverse().join("-");
+  const time = userSlap.dateTime.slice(11, 16);
 
   return (
     <div className='slap-component'>
@@ -21,8 +20,8 @@ const ProfileSlapList = ({user, userSlap, loggedInUser, deleteSlap}) => {
 
               <p>{userSlap.message}</p>
               <p><b>Mood: </b>{userSlap.mood}</p>
-              <p><b>Time Posted: </b>{userSlap.dateTime}</p>
-              <button onClick={handleDelete}>Delete</button>
+              <p><b>Time Posted: </b>{date} at {time}</p>
+              <button>Delete</button>
           </div>
         </div>
     </div>
