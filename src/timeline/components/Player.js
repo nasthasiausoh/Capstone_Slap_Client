@@ -102,7 +102,7 @@ export default function Player() {
   return (
     <div className="player-component">
       <div className="select-component">
-        <h2>Trending Songs</h2>
+        <h2>Select a song:</h2>
         <select value={selectedSong} onChange={handleSelectSong}>
         {Music.map(({title}) => <option value={title}> {title} </option>)}
         </select>

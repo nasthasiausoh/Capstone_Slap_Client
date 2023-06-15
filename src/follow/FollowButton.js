@@ -32,7 +32,7 @@ const FollowButton = ({ loggedInUser, user }) => {
   };
 
   // Check if loggedInUser is viewing their own profile
-  const isCurrentUser = loggedInUser.id === user.id;
+  const isCurrentUser = loggedInUser && loggedInUser.id === user.id ? true : false
 
   return (
     !isCurrentUser && (

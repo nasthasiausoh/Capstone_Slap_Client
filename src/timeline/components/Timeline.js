@@ -27,6 +27,7 @@ const Timeline = ({ listOfSlaps, setListOfSlap, listOfUsers, setListOfUsers, log
 
   return (
     <section className="tl-section">
+      <h1>Latest Hits</h1>
       <Player />
       <div className="timeline-heading-contents">
         {loggedInUser ? (
@@ -56,6 +57,7 @@ const Timeline = ({ listOfSlaps, setListOfSlap, listOfUsers, setListOfUsers, log
           <Slap
             key={slap.id}
             slap={slap}
+            loggedInUser={loggedInUser}
             listOfSlaps={listOfSlaps}
             setListOfSlap={setListOfSlap}
           />

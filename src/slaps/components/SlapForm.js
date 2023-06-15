@@ -1,5 +1,3 @@
-// import { Modal } from "@mui/base";
-// import { Box } from "@mui/system"
 import { useState } from "react";
 import Picker from "@emoji-mart/react";
 import data from "@emoji-mart/data";

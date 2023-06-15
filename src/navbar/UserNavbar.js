@@ -12,12 +12,12 @@ const UserNavbar = ({loggedInUser, setLoggedInUser}) => {
   return (
     <div className='user-header'>
       <div className='slap-logo'> 
-         <Link to ='/'><img src={slapLogo} alt='slapLogo'/></Link> 
+         <Link to ='/home'><img src={slapLogo} alt='slapLogo'/></Link> 
        {/* whenever we click on that h1 tag, it will link us back to the Home page. */}
       </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li>
-              <Link to='/'>Home</Link>
+              <Link to='/home'>Home</Link>
           </li>
 
         <li>
@@ -38,7 +38,7 @@ const UserNavbar = ({loggedInUser, setLoggedInUser}) => {
         </li> */}
 
         <li>
-          <Link to="/">Log out</Link>
+          <Link to="/home">Log out</Link>
         </li>
         </ul>
        <div className='hamburger' onClick={handleClick}>
