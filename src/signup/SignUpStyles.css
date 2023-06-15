@@ -67,7 +67,7 @@ input:hover {
     font-weight: bolder;
 }
 
-button {
+.signin-button button{
     width: 120px;
     border: none;
     height: 45px;
@@ -78,10 +78,11 @@ button {
     font-weight: bold;
 }
 
-button:hover {
+.signin-button button:hover {
     width: 130px;
     height: 50px;
 }
+
 .login-link-from-signup{
     color: rgb(38, 51, 130);
     text-decoration: underline;

@@ -4,9 +4,9 @@ import Profile from '../components/Profile';
 import UserNavbar from '../../navbar/UserNavbar';
 import { useParams } from 'react-router';
 
-const ProfileRoute = ({ loggedInUser }) => {
+const ProfileRoute = ({ loggedInUser, listOfSlaps, addNewSlap }) => {
     const [user, setUser] = useState(null);
-    const {id}=useParams()
+    const {id} = useParams()
   
     useEffect(() => {
       const fetchUser = async () => {
@@ -31,7 +31,7 @@ const ProfileRoute = ({ loggedInUser }) => {
     return (
         <div>
           <UserNavbar user={user} setUser={setUser} loggedInUser={loggedInUser}/>
-            {user ? <Profile user={user} loggedInUser={loggedInUser} /> : <p>Loading user profile...</p>}
+            {user ? <Profile user={user} loggedInUser={loggedInUser} listOfSlaps={listOfSlaps} addNewSlap={addNewSlap}/> : <p>Loading user profile...</p>}
           <Footer/>
         </div>
       );
