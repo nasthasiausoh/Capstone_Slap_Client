@@ -24,7 +24,7 @@ const LogIn = ({ loggedInUser, setLoggedInUser }) => {
       const authenticatedUser = await response.json();
       setLoggedInUser(authenticatedUser);
       // Redirect to the profile page
-      navigate(`/profile/${authenticatedUser.id}`);
+      navigate(`/timeline/${authenticatedUser.id}`);
     } else {
       setErrorMessage("Invalid email or password");
     }

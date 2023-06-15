@@ -17,7 +17,7 @@ const Video = () => {
             
             <div>
                 <Link to='/aboutUs' className='btn'>About Us</Link>
-                <Link to='/timeline' className='btn btn-light'>Launch onto Slap Timeline</Link>
+                <Link to='/login' className='btn btn-light'>Launch onto Slap Timeline</Link>
                 {/* make this subrina's log in page*/}
             </div>
         </div>

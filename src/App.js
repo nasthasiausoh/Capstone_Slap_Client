@@ -31,9 +31,6 @@ function App() {
     const updatedLoggedInUser = {...loggedInUser};
     updatedLoggedInUser.slaps = updatedSlaps;
     setLoggedInUser(updatedLoggedInUser);
-    // const data = await response.json()
-    // const updatedSlaps = [...listOfSlaps, data]
-    // setListOfSlaps(updatedSlaps)
     fetchListOfUsers();
     fetchListOfSlaps();
   }
@@ -54,26 +51,27 @@ function App() {
     const data = await response.json();
     setListOfSlaps(data);
   };
-const deleteSlap = (id) => {
-  fetch(`http://localhost:8080/slaps/${id}`, 
-  {method: 'DELETE', 
-  headers: {'Content-Type': "application/json"}}
-  )
 
-  const updatedSlaps = listOfSlaps.filter((slap)=> {
-   return slap.id !== id 
-  })
+  
+  const deleteSlap = (id) => {
+    fetch(`http://localhost:8080/slaps/${id}`, 
+    {method: 'DELETE', 
+    headers: {'Content-Type': "application/json"}}
+    )
 
-  setListOfSlaps(updatedSlaps)
-}
+    const updatedSlaps = listOfSlaps.filter((slap)=> {
+    return slap.id !== id 
+    })
+
+    setListOfSlaps(updatedSlaps)
+  }
 
 
-
-if (loggedInUser) {
+// if (loggedInUser) {
   return (
     <>
       <Routes>
-        <Route path="/home" element={<HomeRoute />} />
+        <Route path="/" element={<HomeRoute />} />
 
         <Route path="/aboutUs" element={<AboutUsRoute />} />
 
@@ -120,38 +118,38 @@ if (loggedInUser) {
       </Routes>
     </>
   );
-        } else {
-          return (
-            <>
-            <Routes>
-              <Route
-              path="/logIn"
-              element={
-                <LogInRoute
-                  loggedInUser={loggedInUser}
-                  setLoggedInUser={setLoggedInUser}/>
-              } />
+        // } else {
+        //   return (
+        //     <>
+        //     <Routes>
+        //       <Route
+        //       path="/logIn"
+        //       element={
+        //         <LogInRoute
+        //           loggedInUser={loggedInUser}
+        //           setLoggedInUser={setLoggedInUser}/>
+        //       } />
     
-            <Route
-              path="/signUp"
-              element={
-                <SignUpRoute
-                  loggedInUser={loggedInUser}
-                  setLoggedInUser={setLoggedInUser}
-                  listOfUsers={listOfUsers}
-                  setListOfUsers={setListOfUsers}/>
-              } />
+        //     <Route
+        //       path="/signUp"
+        //       element={
+        //         <SignUpRoute
+        //           loggedInUser={loggedInUser}
+        //           setLoggedInUser={setLoggedInUser}
+        //           listOfUsers={listOfUsers}
+        //           setListOfUsers={setListOfUsers}/>
+        //       } />
 
-            <Route path="/home" element={<HomeRoute />} />
+        //     <Route path="/home" element={<HomeRoute />} />
 
-          </Routes>
+        //   </Routes>
           
-          <LogInRoute
-          loggedInUser={loggedInUser}
-          setLoggedInUser={setLoggedInUser} />
-        </>
-          )
-        }
+        //   <LogInRoute
+        //   loggedInUser={loggedInUser}
+        //   setLoggedInUser={setLoggedInUser} />
+        // </>
+        //   )
+        // }
 }
 export default App;
 

@@ -12,12 +12,12 @@ const UserNavbar = ({loggedInUser, setLoggedInUser}) => {
   return (
     <div className='user-header'>
       <div className='slap-logo'> 
-         <Link to ='/home'><img src={slapLogo} alt='slapLogo'/></Link> 
+         <Link to ='/'><img src={slapLogo} alt='slapLogo'/></Link> 
        {/* whenever we click on that h1 tag, it will link us back to the Home page. */}
       </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li>
-              <Link to='/home'>Home</Link>
+              <Link to='/'>Home</Link>
           </li>
 
         <li>
@@ -27,18 +27,9 @@ const UserNavbar = ({loggedInUser, setLoggedInUser}) => {
         <li>
             <Link to={`/profile/${loggedInUser.id}`}>My Profile</Link>
           </li>
-          {/* Inside My Profile include: My Friends and Switch Accounts */}
-
-        {/* <li>
-              <Link to='/myFriends'>My Friends</Link>
-          </li> */}
-
-        {/* <li>
-            <Link to='/logIn'>Switch Accounts</Link>
-        </li> */}
 
         <li>
-          <Link to="/home">Log out</Link>
+          <Link to="/">Log out</Link>
         </li>
         </ul>
        <div className='hamburger' onClick={handleClick}>
