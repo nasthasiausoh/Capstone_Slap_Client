@@ -11,6 +11,23 @@
     text-align: center;
 }
 
+.player-component h2 {
+    padding: .8rem;
+    color: rgb(59, 70, 139);
+}
+
+.player-component p, .player-component h3 {
+    color: rgb(59, 70, 139);
+}
+
+.select-component select {
+    border-radius: 18px;
+    width: 20rem;
+    height: 2.5rem;
+    padding: 2%;
+    font-size: 1.2rem;
+}
+
 .musicImage {
     border-radius: 10%;
     align-content:center;

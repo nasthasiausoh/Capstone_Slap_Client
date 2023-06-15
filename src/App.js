@@ -55,10 +55,11 @@ function App() {
     setListOfSlaps(data);
   };
 
+  if (loggedInUser) {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomeRoute />} />
+        <Route path="/home" element={<HomeRoute />} />
 
         <Route path="/aboutUs" element={<AboutUsRoute />} />
 
@@ -100,11 +101,43 @@ function App() {
 
         <Route
           path="/profile/:id"
-          element={<ProfileRoute loggedInUser={loggedInUser} listOfSlaps={listOfSlaps} addNewSlap={addNewSlap}/>}
+          element={<ProfileRoute loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} addNewSlap={addNewSlap}/>}
         />
       </Routes>
     </>
   );
+        } else {
+          return (
+            <>
+            <Routes>
+              <Route
+              path="/logIn"
+              element={
+                <LogInRoute
+                  loggedInUser={loggedInUser}
+                  setLoggedInUser={setLoggedInUser}/>
+              } />
+    
+            <Route
+              path="/signUp"
+              element={
+                <SignUpRoute
+                  loggedInUser={loggedInUser}
+                  setLoggedInUser={setLoggedInUser}
+                  listOfUsers={listOfUsers}
+                  setListOfUsers={setListOfUsers}/>
+              } />
+
+            <Route path="/home" element={<HomeRoute />} />
+
+          </Routes>
+          
+          <LogInRoute
+          loggedInUser={loggedInUser}
+          setLoggedInUser={setLoggedInUser} />
+        </>
+          )
+        }
 }
 
 
