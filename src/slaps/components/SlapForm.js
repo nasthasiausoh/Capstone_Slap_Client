@@ -31,22 +31,26 @@ const SlapForm = ({loggedInUser, addNewSlap}) => {
       
   return (
     <div className="slap-form-component">
-      <h2>Create a Slap!</h2>
+      <h2 id="create-slap-heading">Create a Slap!</h2>
         <div>
           <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Enter your message"
-              value={message}
-              onChange={(event) => setMessage(event.target.value)}
-            />
+              <div className="create-slap-input-fields">
+                <input
+                  type="text"
+                  placeholder="Enter your message"
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
+                  id="type-slap-message"
+                />
 
-            <input
-              type="text"
-              placeholder="Select an Emoji"
-              value={currentEmoji.native}
-              onClick={handleEmojiToggle}
-            />
+                <input
+                  type="text"
+                  placeholder="Select an Emoji"
+                  value={currentEmoji.native}
+                  onClick={handleEmojiToggle}
+                  id="select-an-emoji"
+                />
+            </div>
 
             {showPicker ? <Picker
                 className="picker"
