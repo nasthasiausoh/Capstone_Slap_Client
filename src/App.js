@@ -54,8 +54,22 @@ function App() {
     const data = await response.json();
     setListOfSlaps(data);
   };
+const deleteSlap = (id) => {
+  fetch(`http://localhost:8080/slaps/${id}`, 
+  {method: 'DELETE', 
+  headers: {'Content-Type': "application/json"}}
+  )
 
-  if (loggedInUser) {
+  const updatedSlaps = listOfSlaps.filter((slap)=> {
+   return slap.id !== id 
+  })
+
+  setListOfSlaps(updatedSlaps)
+}
+
+
+
+if (loggedInUser) {
   return (
     <>
       <Routes>
@@ -101,7 +115,7 @@ function App() {
 
         <Route
           path="/profile/:id"
-          element={<ProfileRoute loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} addNewSlap={addNewSlap}/>}
+          element={<ProfileRoute loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} addNewSlap={addNewSlap} deleteSlap={deleteSlap}/>}
         />
       </Routes>
     </>
@@ -139,56 +153,6 @@ function App() {
           )
         }
 }
-
-
-
-  // const fetchListOfUsers = async () => {
-  //   const response = await fetch ("http://localhost:8080/users");
-  //   const data = await response.json();
-  //   setListOfUsers(data);
-  // } 
-  // useEffect(() =>{
-  //   fetchListOfUsers()
-  // }, []);
-
-
-  // const fetchUserById = async (id) => {
-  //   const response = await fetch (`http://localhost:8080/users/${id}`)
-  //   const data = await response.json();
-  //   setUserById(data);
-  // }
-  // useEffect(() => {
-  //   fetchUserById()
-  // },[]);
-
-
-//   return (
-//    <>
-//     <Routes> 
-//       <Route path='/' element={<HomeRoute/> } />
-
-//       <Route path='/aboutUs' element={<AboutUsRoute />} />
-
-//       <Route path='/logIn' element={<LogInRoute 
-//         loggedInUser={loggedInUser} 
-//         setLoggedInUser={setLoggedInUser}/>} />
-
-//       <Route path='/signUp' element={<SignUpRoute
-//         loggedInUser={loggedInUser} 
-//         setLoggedInUser={setLoggedInUser}
-//         listOfUsers={listOfUsers}
-//         setListOfUsers={setListOfUsers} 
-//         newUser={newUser}
-//         setNewUser={setNewUser} />} />
-
-//       <Route path='/timeline' element={<TimelineRoute 
-//         listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} />} />
-
-//     </Routes>
-//    </>
-//   );
-// }
-
 export default App;
 
 

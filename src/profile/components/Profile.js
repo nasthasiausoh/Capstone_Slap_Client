@@ -7,7 +7,8 @@ import { BioModal, UsernameModal } from './BioModal';
 import { useNavigate } from 'react-router';
 import SlapForm from '../../slaps/components/SlapForm';
 
-const Profile = ({ user, loggedInUser, setLoggedInUser, listOfSlaps, setListOfSlaps, addNewSlap}) => {
+const Profile = ({ user, loggedInUser, setLoggedInUser, listOfSlaps, setListOfSlaps, addNewSlap, deleteSlap}) => {
+
   const isCurrentUser = loggedInUser && loggedInUser.id === user.id;
   const initialFollowing = loggedInUser && loggedInUser.following.some((followedUser) => followedUser.id === user.id);
 
@@ -80,7 +81,7 @@ const handleDeleteAccount = async (id) => {
 
   const userSlapComponents = user.slaps.map((userSlap) => {
     if(loggedInUser) {
-      return <ProfileSlapList userSlap={userSlap} user={loggedInUser.id === user.id ? loggedInUser : user} />;
+      return <ProfileSlapList userSlap={userSlap} user={loggedInUser.id === user.id ? loggedInUser : user}  deleteSlap={deleteSlap}/>;
     } else {
       return <h3>Please log in</h3>
     }
