@@ -2,13 +2,16 @@
 .player-component {
     background-color: beige;
     width: 25%;
-    max-width: 600px;
-    margin: 1em auto;
-    padding-bottom: 2em;
-    border: 0.1px solid black;
+    max-width: 300px;
+    margin-left: 50px;
     border-radius: 10px;
-    align-items: center;
     text-align: center;
+    align-items: left;
+}
+
+.player{
+    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .player-component h2 {
@@ -26,6 +29,7 @@
     height: 2.5rem;
     padding: 2%;
     font-size: 1.2rem;
+    align-items: left;
 }
 
 .musicImage {
@@ -80,7 +84,7 @@ input[type="range"] {
     background-color: #27ae60;
 }
 
-@media (max-width: 900px) {
+@media (max-width:200px) {
     .player-component, .musicImage{
         width: 70%;
     }

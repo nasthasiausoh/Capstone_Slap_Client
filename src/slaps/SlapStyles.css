@@ -2,7 +2,7 @@
 .slap-component {
    display: flex;
    flex-direction: column;
-   justify-content: space-around;
+   justify-content:left;
    margin: 30px;
    height: 300px;
    width: 80%;

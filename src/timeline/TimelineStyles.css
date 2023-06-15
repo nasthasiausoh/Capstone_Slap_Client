@@ -6,12 +6,12 @@
     height: 100vh;
     width: 100%;
     padding: 30px;
-    padding-top: 150px;
+    padding-top: 20x;
     overflow:scroll;
 }
 
 .tl-section{
-    padding-top: 400px;
+    padding-top: 150px;
     font-weight: 40px;
     font-size: 1.6rem;
     width: 100%;
