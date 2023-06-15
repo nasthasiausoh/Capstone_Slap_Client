@@ -3,9 +3,9 @@ import '../ProfileStyles.css';
 import ProfileSlapList from './ProfileSlapList';
 import FollowButton from '../../follow/FollowButton';
 import ConnectionsModal from '../../modals/ConnectionsModal';
-import { BioModal, UsernameModal } from './BioModal';
 import { useNavigate } from 'react-router';
 import SlapForm from '../../slaps/components/SlapForm';
+import { BioModal, UsernameModal } from '../../modals/BioModal';
 
 const Profile = ({ user, loggedInUser, setLoggedInUser, listOfSlaps, setListOfSlaps, addNewSlap, deleteSlap}) => {
 
@@ -200,13 +200,16 @@ const handleDeleteAccount = async (id) => {
         <div className="profile-list-of-slaps">{userSlapComponents}</div>
         
         {showDeleteAccountModal && (
-          <div className="modal-background">
-            <div className="modal-content">
-            <div className="delete-account-modal">
-              <p>Confirm you want to delete your account</p>
-              <button onClick={() => handleDeleteAccount(loggedInUser.id)}>Confirm</button>
-              <button onClick={closeDeleteAccountModal}>Cancel</button>
-            </div>
+          <div className="update-modal-background">
+            <div className="update-modal-content">
+              <div className="delete-account-modal">
+                <h2>Confirm you want to delete your account</h2>
+                <p><i>Once you delete your account, you cannot retrieve it</i></p>
+                <div className='delete-user-modal-buttons'>
+                <button onClick={() => handleDeleteAccount(loggedInUser.id)} id='confirm-delete-user-button'>Confirm</button>
+                <button onClick={closeDeleteAccountModal}>Cancel</button>
+              </div>
+              </div>
             </div>
           </div>
         )}

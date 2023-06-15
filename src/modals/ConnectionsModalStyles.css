@@ -24,7 +24,7 @@ border-radius: 8px;
 position: absolute;
 top: 20%;
 right: 27%;
-background-color: rgb(118, 134, 234);
+background-color: #49c9f0;;
 border-radius: 18px;
 font-size: 24px;
 cursor: pointer;
@@ -35,19 +35,19 @@ height: 2.3rem;
 
 .modal-background h1 {
 font-size: 3rem;
-color: #07002a;
+color: black;
 text-decoration: underline;
 margin-left: 35%
 }
 
 .modal-background h2 {
 font-size: 2.4rem;
-color: #07002a;
+color: black;
 }
 
 .modal-background p {
 font-size: 1.4rem;
-color: #07002a;
+color: black;
 padding-left: .5rem;
 }
 
@@ -64,3 +64,70 @@ margin-bottom: 10px;
     flex-direction: row;
     align-items: center;
 }
+
+/* update user detail modals:  */
+.update-modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .update-modal-content {
+  background-color: white;
+  opacity: 80%;
+  padding: 20px;
+  width: 80rem;
+  height: 20rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly
+  }
+  
+  .update-modal-content input {
+    width: 70rem;;
+    height: 5rem;
+    border: black;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .update-modal-background p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  .update-modal-background h2 {
+    color: black;
+    font-size: 2.5rem;
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .modal-buttons button {
+    margin: 2.5%;
+    color: white;
+    width: 200px;
+    border:none;
+    height: 45px;
+    margin-top: 1rem;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    background-color: #49c9f0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../ProfileStyles.css'
+import './ConnectionsModalStyles.css'
 
 const BioModal = ({ loggedInUser, onClose, onUpdateBio }) => {
   const [bio, setBio] = useState('');
@@ -14,12 +14,14 @@ const BioModal = ({ loggedInUser, onClose, onUpdateBio }) => {
   };
 
   return (
-    <div className="update-bio-modal">
-      <h2>Update Bio</h2>
-      <input type="text" placeholder="Enter new bio" value={bio} onChange={handleBioChange} />
-      <div className="modal-buttons">
-        <button onClick={handleSubmit}>Confirm</button>
-        <button onClick={onClose}>Cancel</button>
+    <div className="update-modal-background">
+        <div className="update-modal-content">
+        <h2>Update Your Bio</h2>
+        <input type="text" placeholder="Enter new bio..." value={bio} onChange={handleBioChange} />
+        <div className="modal-buttons">
+          <button onClick={handleSubmit}>Confirm Changes</button>
+          <button onClick={onClose}>Cancel</button>
+        </div>
       </div>
     </div>
   );
@@ -38,7 +40,8 @@ const UsernameModal = ({ loggedInUser, onClose, onUpdateUsername }) => {
   };
 
   return (
-    <div className="modal">
+    <div className="update-modal-background">
+      <div className="update-modal-content">
       <h2>Update Username</h2>
       <input type="text" placeholder="Enter new username" value={username} onChange={handleUsernameChange} />
       <div className="modal-buttons">
@@ -46,6 +49,8 @@ const UsernameModal = ({ loggedInUser, onClose, onUpdateUsername }) => {
         <button onClick={onClose}>Cancel</button>
       </div>
     </div>
+    </div>
+
   );
 };
 
