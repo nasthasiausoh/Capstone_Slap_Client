@@ -6,7 +6,7 @@ import { useParams } from 'react-router';
 
 const ProfileRoute = ({ loggedInUser }) => {
     const [user, setUser] = useState(null);
-    const {id}=useParams()
+    const {id} = useParams()
   
     useEffect(() => {
       const fetchUser = async () => {

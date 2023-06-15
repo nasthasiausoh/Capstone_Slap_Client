@@ -1,3 +1,4 @@
+/* Profile slap styling */
 .slap-component {
    display: flex;
    flex-direction: column;
@@ -10,15 +11,21 @@
    border-radius: 10px;
 }
 
+.profile-list-of-slaps {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 30px;
+}
+
 .user-profile-details {
    display: flex;
    flex-direction: row;
-   align-items: center;
 }
 
 .user-profile-details p {
-   font-size: 1.8rem;
-   font-weight: 700;
+   font-size: 2rem;
+   font-weight: 300;
 }
 
 .user-profile-details img {
@@ -27,3 +34,62 @@
   
 }
 
+.user-slap-contents {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* Timeline slap styling */
+.timeline-list.of.slaps {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin: 30px;
+   height: 300px;
+   width: 90%;
+   padding: 20px;
+   background-color: rgb(118, 134, 234);
+   border-radius: 10px;
+}
+
+.timeline-slap-component {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin: 30px;
+   height: 300px;
+   width: 100rem;
+   padding: 20px;
+   background-color: rgb(118, 134, 234);
+   border-radius: 10px;
+}
+
+.timeline-user-profile-details {
+   display: flex;
+   flex-direction: row;
+}
+
+.timeline-user-profile-details p {
+   font-size: 2rem;
+   font-weight: 300;
+}
+
+.timeline-user-profile-details img {
+   border-radius: 70px;
+   margin-right: 30px;
+  
+}
+
+.timeline-user-slap-contents {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.tl-section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 30px;
+}
