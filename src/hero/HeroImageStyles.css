@@ -7,7 +7,7 @@
 
 .hero-img:before {
     content: '';
-    background: url('../assets/girls.jpg') no-repeat center center/cover;
+    background: url('../assets/Hero\ image\ connections.jpeg') no-repeat center center/cover;
     height: 100%;
     width: 100%;
     position: absolute;
