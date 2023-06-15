@@ -5,7 +5,7 @@ import FollowButton from '../../follow/FollowButton';
 import ConnectionsModal from '../../modals/ConnectionsModal';
 import SlapForm from '../../slaps/components/SlapForm';
 
-const Profile = ({ user, loggedInUser, listOfSlaps, addNewSlap}) => {
+const Profile = ({ user, loggedInUser, listOfSlaps, addNewSlap, deleteSlap}) => {
 
   const isCurrentUser = loggedInUser && loggedInUser.id === user.id;
   const initialFollowing = loggedInUser && loggedInUser.following.some((followedUser) => followedUser.id === user.id);
@@ -25,7 +25,7 @@ const Profile = ({ user, loggedInUser, listOfSlaps, addNewSlap}) => {
   }, [listOfSlaps])
 
   const userSlapComponents = user.slaps.map((userSlap) => {
-    return <ProfileSlapList userSlap={userSlap} user={loggedInUser.id === user.id ? loggedInUser : user} />;
+    return <ProfileSlapList userSlap={userSlap} user={loggedInUser.id === user.id ? loggedInUser : user} deleteSlap={deleteSlap} />;
 
   });
 

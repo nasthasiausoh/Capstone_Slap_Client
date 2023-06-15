@@ -55,6 +55,21 @@ function App() {
     setListOfSlaps(data);
   };
 
+const deleteSlap = (id) => {
+  fetch(`http://localhost:8080/slaps/${id}`, 
+  {method: 'DELETE', 
+  headers: {'Content-Type': "application/json"}}
+  )
+
+  const updatedSlaps = listOfSlaps.filter((slap)=> {
+   return slap.id !== id 
+  })
+
+  setListOfSlaps(updatedSlaps)
+}
+
+
+
   return (
     <>
       <Routes>
@@ -100,7 +115,7 @@ function App() {
 
         <Route
           path="/profile/:id"
-          element={<ProfileRoute loggedInUser={loggedInUser} listOfSlaps={listOfSlaps} addNewSlap={addNewSlap}/>}
+          element={<ProfileRoute loggedInUser={loggedInUser} listOfSlaps={listOfSlaps} addNewSlap={addNewSlap} deleteSlap={deleteSlap}/>}
         />
       </Routes>
     </>

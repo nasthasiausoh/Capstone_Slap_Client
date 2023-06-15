@@ -4,7 +4,7 @@ import Profile from '../components/Profile';
 import UserNavbar from '../../navbar/UserNavbar';
 import { useParams } from 'react-router';
 
-const ProfileRoute = ({ loggedInUser, listOfSlaps, addNewSlap }) => {
+const ProfileRoute = ({ loggedInUser, listOfSlaps, addNewSlap, deleteSlap }) => {
     const [user, setUser] = useState(null);
     const {id} = useParams()
   
@@ -26,12 +26,12 @@ const ProfileRoute = ({ loggedInUser, listOfSlaps, addNewSlap }) => {
     if (loggedInUser) {
         fetchUser();
       }
-    }, [loggedInUser,id]);
+    }, [loggedInUser,id, listOfSlaps]);
 
     return (
         <div>
           <UserNavbar user={user} setUser={setUser} loggedInUser={loggedInUser}/>
-            {user ? <Profile user={user} loggedInUser={loggedInUser} listOfSlaps={listOfSlaps} addNewSlap={addNewSlap}/> : <p>Loading user profile...</p>}
+            {user ? <Profile user={user} loggedInUser={loggedInUser} listOfSlaps={listOfSlaps} addNewSlap={addNewSlap} deleteSlap={deleteSlap}/> : <p>Loading user profile...</p>}
           <Footer/>
         </div>
       );
