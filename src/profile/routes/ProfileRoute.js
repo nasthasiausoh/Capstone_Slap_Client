@@ -5,6 +5,7 @@ import UserNavbar from '../../navbar/UserNavbar';
 import { useParams } from 'react-router';
 
 const ProfileRoute = ({ loggedInUser, setLoggedInUser, listOfSlaps, setListOfSlaps, addNewSlap,  deleteSlap}) => {
+  
     const [user, setUser] = useState(null);
     const {id} = useParams()
   
