@@ -3,6 +3,7 @@ import useSound from "use-sound"; //handles sound
 import {AiFillPlayCircle, AiFillPauseCircle} from "react-icons/ai";// icons for play and pause
 import { IconContext } from "react-icons"; //customising icons
 import {Music} from "../../assets/Music.js"
+import "../PlayerStyles.css"
 
 export default function Player() {
 
@@ -101,6 +102,7 @@ export default function Player() {
   return (
     <div className="player-component">
       <div className="select-component">
+        <h2>Trending Songs</h2>
         <select value={selectedSong} onChange={handleSelectSong}>
         {Music.map(({title}) => <option value={title}> {title} </option>)}
         </select>

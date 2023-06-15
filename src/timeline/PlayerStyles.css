@@ -1,0 +1,70 @@
+/* ---------- Player ---------- */
+.player-component {
+    background-color: beige;
+    width: 25%;
+    max-width: 600px;
+    margin: 1em auto;
+    padding-bottom: 2em;
+    border: 0.1px solid black;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.musicImage {
+    border-radius: 10%;
+    align-content:center;
+    align-items: center;
+    width: 80%;
+}
+
+.playButton {
+    border: none;
+    align-items: center;
+    box-shadow: none;
+    width: 3em;
+    height: 3em;
+    background-color: beige;;
+}
+
+.songTitle {
+    font-size: xx-large;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.artistSubTitle {
+    margin-top: -1em;
+    color: black;
+}
+
+.time {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: smaller;
+}
+
+.time p{
+    color: black;
+}
+
+.timeline {
+    width: 80%;
+    background-color: #27ae60;
+    box-shadow: none;
+    padding-left: 0;
+}
+
+
+input[type="range"] {
+    background-color: #27ae60;
+}
+
+@media (max-width: 900px) {
+    .player-component, .musicImage{
+        width: 70%;
+    }
+}

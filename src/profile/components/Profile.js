@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../ProfileStyles.css';
 import ProfileSlapList from './ProfileSlapList';
-import Player from './Player';
 
 const Profile = ({user, loggedInUser}) => {
 
@@ -26,8 +25,6 @@ const Profile = ({user, loggedInUser}) => {
                 </div>
             </div>
         </section>
-
-        <Player />
 
         <div>
            {userSlapComponents}
