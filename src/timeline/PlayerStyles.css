@@ -28,6 +28,7 @@
     height: 2.5rem;
     padding: 2%;
     font-size: 1.2rem;
+    align-items: left;
 }
 
 .musicImage {
@@ -80,7 +81,7 @@ input[type="range"] {
     background-color: #27ae60;
 }
 
-@media (max-width: 900px) {
+@media (max-width:200px) {
     .player-component, .musicImage{
         width: 70%;
     }

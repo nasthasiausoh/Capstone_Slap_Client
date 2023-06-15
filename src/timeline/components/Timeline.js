@@ -35,18 +35,20 @@ const Timeline = ({ listOfSlaps, setListOfSlap, listOfUsers, setListOfUsers, log
         ) : (
           <h1>Timeline</h1>
         )}
-        {loggedInUser && loggedInUser.following.length > 0 && (
-          <button onClick={handleFilterByFollowing} id="filter-timeline-slaps-button">
-            {showOnlyFollowing ? 'General Slap Feed' : 'Slaps For You'}
-          </button>
-        )}
-        <div className="user-search">
-          <input
-            id="search-input"
-            type="text"
-            placeholder="Search by Username or Slap"
-            onInput={handleSearch}
-          />
+        <div className="timeline-filters">
+          {loggedInUser && loggedInUser.following.length > 0 && (
+            <button onClick={handleFilterByFollowing} id="filter-timeline-slaps-button">
+              {showOnlyFollowing ? 'General Slap Feed' : 'Slaps For You'}
+            </button>
+          )}
+          <div className="user-search">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search by Username or Slap"
+              onInput={handleSearch}
+            />
+          </div>
         </div>
       </div>
 

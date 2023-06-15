@@ -22,7 +22,7 @@
     width: 40%;
     /* box-shadow: 0 0 10px rgb(0, 0, 0); */
     padding-top: 30px;
-    border-radius: 50px;
+    border-radius: 40px;
     background-color: rgb(255, 255, 255);
     font-weight: 300px;
 }
@@ -75,6 +75,7 @@ input{
     background-color: #49c9f0;
     font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .login-button button:hover {

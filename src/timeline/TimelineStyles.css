@@ -6,10 +6,13 @@
     height: 100vh;
     width: 100%;
     padding: 30px;
+    padding-top: 20x;
+    overflow:scroll;
     padding-top: 50px;
 }
 
 .tl-section{
+    padding-top: 400px;
     padding-top: 150px;
     font-weight: 40px;
     font-size: 1.6rem;
@@ -39,10 +42,17 @@
     width: 250px;
     font-size: 1.4rem;
     border-radius: 100px;
-    font-size: 1.4rem;
-    background-color: orange;
-    border-radius: 100px;
+    font-size: 1.5rem;
+    background-color:  orange;
+    border: none;
+    color: white;
+    cursor: pointer;
 
+}
+
+#filter-timeline-slaps-button:hover{
+    height: 80px;
+    width: 260px;
 }
 
 .user-search input {
