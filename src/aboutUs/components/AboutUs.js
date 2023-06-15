@@ -1,7 +1,8 @@
 import React from 'react'
 import '../AboutUsStyles.css'
-
+import zaynahAvatar from './avatar-assets/zaynah-avatar.png'
 const AboutUs = () => {
+
   return (
     <div className='about-us'>
         <div className='card-container'>
@@ -25,6 +26,7 @@ const AboutUs = () => {
              </div>
             <div className='card'>
                 <h3> - Zaynah- </h3>
+                <img src = {zaynahAvatar}  alt = "cartoon rendition of Zaynah"/>
                 <span className='team-member'> </span>
                 <p className='person'> Zaynah</p>
                 <p>- abc -</p>
