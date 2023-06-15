@@ -27,8 +27,6 @@ const Timeline = ({ listOfSlaps, setListOfSlap, listOfUsers, setListOfUsers, log
 
   return (
     <section className="tl-section">
-      <h1>Latest Hits</h1>
-      <Player />
       <div className="timeline-heading-contents">
         {loggedInUser ? (
           <h1>
