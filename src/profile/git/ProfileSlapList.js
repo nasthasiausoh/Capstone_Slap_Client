@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../ProfileStyles.css'
 
 const ProfileSlapList = ({user, userSlap, loggedInUser, deleteSlap}) => {
 
@@ -25,7 +26,7 @@ const ProfileSlapList = ({user, userSlap, loggedInUser, deleteSlap}) => {
               <p>{userSlap.message}</p>
               <p><b>Mood: </b>{userSlap.mood}</p>
               <p><b>Time Posted: </b>{date} at {time}</p>
-              <button onClick={handleDelete}>Delete</button>
+              <button onClick={handleDelete} id='delete-slap-button'>Delete this slap</button>
           </div>
         </div>
     </div>

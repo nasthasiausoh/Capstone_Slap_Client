@@ -1,16 +1,45 @@
-.slap-form-component h2{
+.slap-form-component h2 {
     color: white;
     text-align: center;
     margin: 20px;
+    font-size: 3rem;
+    padding-top: 1.5rem;
 }
 
 .slap-form-component input{
-    margin: 10px;
+    margin-right: 10px;
 }
 
 .slap-submit-button {
-    margin: 20px;
-    width: 100px;
+    width: 150px;
     height: 50px;
     border-radius: 18px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    color: white;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    background-color: rgb(59, 70, 139);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#type-slap-message {
+    width: 60rem;
+    height: 5rem;
+}
+
+#select-an-emoji {
+    width: 11rem;
+    height: 5rem;
+    justify-content: center;
+    padding: 1%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.create-slap-input-fields {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
