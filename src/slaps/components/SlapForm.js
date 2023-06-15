@@ -116,3 +116,7 @@ export default SlapForm;
 // }
  
 // export default SlapForm;
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
