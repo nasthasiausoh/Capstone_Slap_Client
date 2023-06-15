@@ -25,10 +25,12 @@ position: absolute;
 top: 20%;
 right: 27%;
 background-color: rgb(118, 134, 234);
-border: none;
+border-radius: 18px;
 font-size: 24px;
 cursor: pointer;
 color: white;
+width: 5rem;
+height: 2.3rem;
 }
 
 .modal-background h1 {
