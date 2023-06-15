@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const ProfileSlapList = ({user, userSlap}) => {
+const ProfileSlapList = ({user, userSlap, loggedInUser}) => {
+
+
   return (
     <div className='slap-component'>
         <div className='user-profile-details'>
@@ -17,6 +19,7 @@ const ProfileSlapList = ({user, userSlap}) => {
               <p>{userSlap.message}</p>
               <p><b>Mood: </b>{userSlap.mood}</p>
               <p><b>Time Posted: </b>{userSlap.dateTime}</p>
+              <button>Delete</button>
           </div>
         </div>
     </div>
