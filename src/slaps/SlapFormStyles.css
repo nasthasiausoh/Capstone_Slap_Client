@@ -1,0 +1,15 @@
+.slap-form-component h2{
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+
+.slap-form-component input{
+    margin: 10px;
+}
+
+.slap-submit-button {
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+}
