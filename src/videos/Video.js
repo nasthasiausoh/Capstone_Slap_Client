@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './VideoStyles.css'
 
-import globeVideo from '../assets/globe.mp4'
+import globeVideo from '../assets/bgvideo.mp4'
 
 const Video = () => {
   return (
