@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../ProfileStyles.css';
 import ProfileSlapList from './ProfileSlapList';
 import FollowButton from '../../follow/FollowButton';
 import ConnectionsModal from '../../modals/ConnectionsModal';
+import SlapForm from '../../slaps/components/SlapForm';
 
-const Profile = ({ user, loggedInUser }) => {
+const Profile = ({ user, loggedInUser, listOfSlaps, addNewSlap}) => {
   const isCurrentUser = loggedInUser && loggedInUser.id === user.id;
   const initialFollowing = loggedInUser && loggedInUser.following.some((followedUser) => followedUser.id === user.id);
 
@@ -18,11 +19,17 @@ const Profile = ({ user, loggedInUser }) => {
     setShowModal(false);
   };
 
+  useEffect( ()=> 
+  {
+  }, [listOfSlaps])
+
   const userSlapComponents = user.slaps.map((userSlap) => {
     return <ProfileSlapList userSlap={userSlap} user={loggedInUser.id === user.id ? loggedInUser : user} />;
+
   });
 
   return (
+    <>
     <div>
       <section className="bio-component">
         <div className="profile-details">
@@ -50,6 +57,8 @@ const Profile = ({ user, loggedInUser }) => {
 
       {showModal && <ConnectionsModal loggedInUser={loggedInUser} user={user} onClose={closeModal} />}
     </div>
+    <SlapForm loggedInUser={loggedInUser} addNewSlap={addNewSlap}/>
+    </>
   );
 };
 
