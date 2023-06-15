@@ -66,4 +66,5 @@ const SlapForm = ({loggedInUser, addNewSlap}) => {
 
 }
  
+
 export default SlapForm;
