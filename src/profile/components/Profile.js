@@ -195,6 +195,8 @@ const handleDeleteAccount = async (id) => {
           </div>
         </section>
   
+        <SlapForm loggedInUser={loggedInUser} addNewSlap={addNewSlap}/>
+        
         <div className="profile-list-of-slaps">{userSlapComponents}</div>
         
         {showDeleteAccountModal && (
@@ -224,7 +226,6 @@ const handleDeleteAccount = async (id) => {
         )}
       </div>
       
-      <SlapForm loggedInUser={loggedInUser} addNewSlap={addNewSlap}/>
       </>
     ); 
   } else {
