@@ -9,9 +9,16 @@
 }
 
 button{
-    font-size: larger;
-    background-color:  rgb(59, 70, 139);
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 210px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    height: 68px;
+    background-color:rgb(59, 70, 139);
+    border-radius: 100px;
     border: none;
+    cursor: pointer;
     color: white;
 }
 
