@@ -2,6 +2,7 @@
     width: 100%;
     padding: 6rem 1rem;
     background-color: #07002a;
+
 }
 
 .card-container {
@@ -10,10 +11,13 @@
     display: grid;
     grid-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
 }
 
 .card-container .card {
     border: 1px solid #eee;
+        align-items: center;
 }
 
 .card {
@@ -53,6 +57,14 @@
     display: block;
     width: 80%;
     margin: 2rem auto;
+}
+
+.card p {
+    font-size: 40px;
+}
+
+.flaw {
+    font-style: italic;
 }
 
 @media screen and (max-width: 980px) {
