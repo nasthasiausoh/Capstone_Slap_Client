@@ -46,7 +46,7 @@ const handleDeleteAccount = async (id) => {
       setListOfSlaps(updatedSlaps);
 
       // Redirect to the home page or any other desired page
-      // window.location.href = '/'; // Replace '/' with the desired URL
+      window.location.href = '/'; // Replace '/' with the desired URL
       // Clear the loggedInUser state
       setLoggedInUser(null);
     } else {

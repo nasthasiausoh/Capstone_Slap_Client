@@ -67,7 +67,7 @@ function App() {
   }
 
 
-// if (loggedInUser) {
+if (loggedInUser) {
   return (
     <>
       <Routes>
@@ -118,39 +118,77 @@ function App() {
       </Routes>
     </>
   );
-        // } else {
-        //   return (
-        //     <>
-        //     <Routes>
-        //       <Route
-        //       path="/logIn"
-        //       element={
-        //         <LogInRoute
-        //           loggedInUser={loggedInUser}
-        //           setLoggedInUser={setLoggedInUser}/>
-        //       } />
-    
-        //     <Route
-        //       path="/signUp"
-        //       element={
-        //         <SignUpRoute
-        //           loggedInUser={loggedInUser}
-        //           setLoggedInUser={setLoggedInUser}
-        //           listOfUsers={listOfUsers}
-        //           setListOfUsers={setListOfUsers}/>
-        //       } />
+  } else {
+    return (
+      <>
+      <Routes>
+      <Route path="/" element={<HomeRoute />} />
 
-        //     <Route path="/home" element={<HomeRoute />} />
+      <Route path="/aboutUs" element={<AboutUsRoute />} />
 
-        //   </Routes>
-          
-        //   <LogInRoute
-        //   loggedInUser={loggedInUser}
-        //   setLoggedInUser={setLoggedInUser} />
-        // </>
-        //   )
-        // }
+        <Route
+        path="/logIn"
+        element={
+          <LogInRoute
+            loggedInUser={loggedInUser}
+            setLoggedInUser={setLoggedInUser}/>
+        } />
+
+      <Route
+        path="/signUp"
+        element={
+          <SignUpRoute
+            loggedInUser={loggedInUser}
+            setLoggedInUser={setLoggedInUser}
+            listOfUsers={listOfUsers}
+            setListOfUsers={setListOfUsers}/>
+        } />
+
+      <Route path="/home" element={<HomeRoute />} />
+
+      </Routes>
+      
+      {/* <LogInRoute
+      loggedInUser={loggedInUser}
+      setLoggedInUser={setLoggedInUser} /> */}
+    </>
+    )
+  }
 }
+
+//         } else {
+//           return (
+//             <>
+//             <Routes>
+//               <Route
+//               path="/logIn"
+//               element={
+//                 <LogInRoute
+//                   loggedInUser={loggedInUser}
+//                   setLoggedInUser={setLoggedInUser}/>
+//               } />
+    
+//             <Route
+//               path="/signUp"
+//               element={
+//                 <SignUpRoute
+//                   loggedInUser={loggedInUser}
+//                   setLoggedInUser={setLoggedInUser}
+//                   listOfUsers={listOfUsers}
+//                   setListOfUsers={setListOfUsers}/>
+//               } />
+
+//             <Route path="/home" element={<HomeRoute />} />
+
+//           </Routes>
+          
+//           <LogInRoute
+//           loggedInUser={loggedInUser}
+//           setLoggedInUser={setLoggedInUser} />
+//         </>
+//           )
+//         }
+// }
 export default App;
 
 
