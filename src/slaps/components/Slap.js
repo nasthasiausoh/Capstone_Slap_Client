@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 
 const Slap = ({slap}) => {
 
+  const date = slap.dateTime.slice(0, 10).split("-").reverse().join("-");
+  const time = slap.dateTime.slice(11, 16);
+
   return (
     <div className='timeline-list-of-slaps'>
      <div className='timeline-slap-component'>
@@ -20,7 +23,7 @@ const Slap = ({slap}) => {
 
             <p>{slap.message}</p>
             <p><b>Mood: </b> {slap.mood}</p>
-            <p><b>Time Posted:</b> {slap.dateTime}</p>
+            <p><b>Time Posted: </b>{date} at {time}</p>
            </div>
         </div>
     </div>
