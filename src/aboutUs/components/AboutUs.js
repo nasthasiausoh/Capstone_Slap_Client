@@ -15,7 +15,7 @@ const AboutUs = () => {
                 <span className='team-member'> </span>
                 <p className='person'> Natasha</p>
                 <p>Unofficial ambassador of going the extra mile, the ultimate MVP</p>
-                <p id='flaw'>Fatal flaw: works too much</p>
+                <p className='flaw'>Fatal flaw: works too much</p>
           
              </div>
              <div className='card'>
@@ -24,7 +24,7 @@ const AboutUs = () => {
                 <span className='team-member'> </span>
                 <p className='person'> Zaynah</p>
                 <p>Never runs out of things to say, a black belt in conversation</p>
-                <p id='flaw'>Fatal flaw: has Hayfever</p>
+                <p className='flaw'>Fatal flaw: has Hayfever</p>
   
              </div>
             <div className='card'>
@@ -33,7 +33,7 @@ const AboutUs = () => {
                 <span className='team-member'> </span>
                 <p className='person'> Rada</p>
                 <p>If sunshine was a person, it would be Rada</p>
-                <p id='flaw'>Fatal flaw: none, just good vibes</p>
+                <p className='flaw'>Fatal flaw: none, just good vibes</p>
              </div>
            
             <div className='card'>
@@ -42,7 +42,7 @@ const AboutUs = () => {
                 <span className='team-member'> </span>
                 <p className='person'> Subrina</p>
                 <p> From internet breaker to internet creator, a real life cheat-code</p>
-                <p id='flaw'>Fatal flaw: underestimates herself</p>
+                <p className='flaw'>Fatal flaw: underestimates herself</p>
           
              </div>
 
