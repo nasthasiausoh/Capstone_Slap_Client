@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className='header'>
       <div className='slap-logo'> 
-         <Link to ='/home'><img src={slapLogo} alt='slapLogo'/></Link> 
+         <Link to ='/'><img src={slapLogo} alt='slapLogo'/></Link> 
        {/* whenever we click on that h1 tag, it will link us back to the Home page. */}
       </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>

@@ -6,6 +6,10 @@ const ProfileSlapList = ({user, userSlap, loggedInUser, deleteSlap}) => {
   const date = userSlap.dateTime.slice(0, 10).split("-").reverse().join("-");
   const time = userSlap.dateTime.slice(11, 16);
 
+  const handleDelete = () => {
+    deleteSlap(userSlap.id)
+  }
+
   return (
     <div className='slap-component'>
         <div className='user-profile-details'>
@@ -21,7 +25,7 @@ const ProfileSlapList = ({user, userSlap, loggedInUser, deleteSlap}) => {
               <p>{userSlap.message}</p>
               <p><b>Mood: </b>{userSlap.mood}</p>
               <p><b>Time Posted: </b>{date} at {time}</p>
-              <button>Delete</button>
+              <button onClick={handleDelete}>Delete</button>
           </div>
         </div>
     </div>
