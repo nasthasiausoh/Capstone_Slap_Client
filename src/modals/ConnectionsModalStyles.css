@@ -65,6 +65,12 @@ margin-bottom: 10px;
     align-items: center;
 }
 
+.connections-list-follow-following {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 /* update user detail modals:  */
 .update-modal-background {
   position: fixed;

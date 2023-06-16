@@ -10,33 +10,35 @@ const ConnectionsModal = ({ loggedInUser, user, onClose }) => {
             <button className="modal-close" onClick={onClose}>
             Exit
             </button>
-            <div className='follow-list'>
-                <h2>Following:</h2>
-                <ul>
-                {user.following.map((followedUser) => (
-                    <li key={followedUser.id}>
-                        <div className='connections-user-format'>
-                            <img src={followedUser.profilePicture} alt='followed-profile-picture' width={60}/>
-                            <p>{followedUser.username}</p>
-                            {/* <a href={`/users/${followedUser.id}`}>{followedUser.username}</a> */}
-                        </div>
-                    </li>
-                ))}
-                </ul>
-            </div>
+            <div className='connections-list-follow-following'>
+                <div className='follow-list'>
+                    <h2>Following:</h2>
+                    <ul>
+                    {user.following.map((followedUser) => (
+                        <li key={followedUser.id}>
+                            <div className='connections-user-format'>
+                                <img src={followedUser.profilePicture} alt='followed-profile-picture' width={60}/>
+                                <p>{followedUser.username}</p>
+                                {/* <a href={`/users/${followedUser.id}`}>{followedUser.username}</a> */}
+                            </div>
+                        </li>
+                    ))}
+                    </ul>
+                </div>
 
-            <div className='follow-list'>
-                <h2>Followers:</h2>
-                <ul>
-                {user.followers.map((follower) => (
-                    <li key={follower.id}>
-                        <div className='connections-user-format'>
-                            <img src={follower.profilePicture} alt='follower-profile-picture' width={60}/>
-                            <p>{follower.username}</p>
-                        </div>
-                    </li>
-                ))}
-                </ul>
+                <div className='follow-list'>
+                    <h2>Followers:</h2>
+                    <ul>
+                    {user.followers.map((follower) => (
+                        <li key={follower.id}>
+                            <div className='connections-user-format'>
+                                <img src={follower.profilePicture} alt='follower-profile-picture' width={60}/>
+                                <p>{follower.username}</p>
+                            </div>
+                        </li>
+                    ))}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

@@ -84,7 +84,7 @@ button:hover{
 #follow-unfollow-update-bio-button {
     margin-left: 40px;
     margin-right: 10px;
-    width: 200px;
+    width: 250px;
     font-size: 1.4rem;
     font-weight: 100;
     height: 68px;
@@ -92,13 +92,14 @@ button:hover{
     border-radius: 100px;
     cursor:pointer;
     font-weight: bold;
-
 }
+
 
 #follow-unfollow-update-bio-button:hover {
 background-color: orange;
 transition-duration: 0.5s;
 }
+
 .modal-background {
 position: fixed;
 top: 0;
@@ -270,16 +271,25 @@ margin-bottom: 10px;
       align-items: center;
   }
 
-  #delete-slap-button {
+  .delete-button {
     margin-right: 10px;
     margin-top: 10px;
-    width: 200px;
+    width: 150px;
     font-size: 1.4rem;
     font-weight: 100;
     height: 40px;
-    background-color: orange;
+    /* background-color: orange; */
     border-radius: 100px;
     font-weight: 700;
   }
 
-  
+  .delete-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.delete-button button:hover{
+    background-color: hotpink;
+}
+
