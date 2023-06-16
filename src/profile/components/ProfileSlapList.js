@@ -26,10 +26,11 @@ const ProfileSlapList = ({user, userSlap, loggedInUser, deleteSlap}) => {
                 <p>{userSlap.message}</p>
                 <p><b>Mood: </b>{userSlap.mood}</p>
                 <p><b>Time Posted: </b>{date} at {time}</p>
+              </div>  
                 <div className='delete-button'>
                     <button onClick={handleDelete}>Delete</button>
               </div>
-          </div>
+          
       </div>
     </div>
   )
