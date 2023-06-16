@@ -10,9 +10,6 @@ const TimelineContainer = ({listOfSlaps, setListOfSlaps, listOfUsers, setListOfU
 
   return (
     <>
-      <div className='player'>
-        <Player /> 
-      </div>
 
       <div className='timeline-container '>
           <Timeline listOfSlaps={listOfSlaps} setListOfSlaps={setListOfSlaps} listOfUsers={listOfUsers} setListOfUsers={setListOfUsers} loggedInUser={loggedInUser}/>

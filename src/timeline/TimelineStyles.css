@@ -1,3 +1,15 @@
+.whole-timeline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* overflow: ('overflow-x', 'initial'); */
+    /* overflow-y: auto */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    transition: top 0.3s;
+}
+
 .timeline-container {
     display: flex;
     flex-direction: column;
@@ -6,9 +18,9 @@
     height: 100vh;
     width: 100%;
     padding: 30px;
-    padding-top: 20x;
-    overflow:scroll;
     padding-top: 50px;
+    margin-top: 80px;
+    margin-left: 300px;
 }
 
 .tl-section{
@@ -18,7 +30,6 @@
     font-size: 1.6rem;
     width: 100%;
     height: 100%;
-    margin-left: 200px;
 }
 
 .tl-section h1{
@@ -47,7 +58,6 @@
     border: none;
     color: white;
     cursor: pointer;
-
 }
 
 #filter-timeline-slaps-button:hover{

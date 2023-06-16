@@ -102,13 +102,13 @@ export default function Player() {
   return (
     <div className="player-component">
       <div className="select-component">
-        <h2>Select a song:</h2>
+        <h2>Select a Song</h2>
         <select value={selectedSong} onChange={handleSelectSong}>
         {Music.map(({title}) => <option value={title}> {title} </option>)}
         </select>
       </div>
 
-      <h2>Listening To</h2>
+      <h2>Current Song</h2>
       <img className="musicImage" src={playingSong.image_path} />
       
       <div>
@@ -135,13 +135,13 @@ export default function Player() {
       <div className="music-buttons">
         {!isPlaying ? (
           <button className="playButton" onClick={playingButton}>
-            <IconContext.Provider value={{ size: "3em", color: "green" }}>
+            <IconContext.Provider value={{ size: "4em", color: "purple" }}>
               <AiFillPlayCircle />
             </IconContext.Provider>
           </button>
         ) : (
           <button className="playButton" onClick={playingButton}>
-            <IconContext.Provider value={{ size: "3em", color: "green" }}>
+            <IconContext.Provider value={{ size: "4em", color: "purple" }}>
               <AiFillPauseCircle />
             </IconContext.Provider>
           </button>

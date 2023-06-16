@@ -1,20 +1,32 @@
 .player{
-    position: sticky;
-    top: 0;
+    height: 100%; 
+    width: 600px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 350px; 
+    left: 150px;
+    bottom: 100px;
+    overflow-x: hidden;
+}
+
+.player h2{
+    color: white;
+    text-align: center;
+    font-size: xxx-large;
+    padding-bottom: 20px;
 }
 
 .player-component {
     background-color: beige;
-    width: 30%;
-    max-width: 600px;
+    /* max-width: 600px; */
     padding-bottom: 2em;
     border-radius: 20px;
     text-align: center;
-    align-items: left;
 }
 
 .player-component h2 {
     padding: .8rem;
+    font-size: xx-large;
     color: rgb(59, 70, 139);
 }
 
@@ -25,10 +37,13 @@
 .select-component select {
     border-radius: 18px;
     width: 20rem;
-    height: 2.5rem;
+    height: 3.5rem;
     padding: 2%;
     font-size: 1.2rem;
-    align-items: left;
+}
+
+.select-component h2{
+    font-size: xx-large;
 }
 
 .musicImage {
@@ -36,24 +51,37 @@
     width: 80%;
 }
 
+.music-buttons button:hover{
+    background-color: purple !important;
+    transition-duration: 0.5s;
+    transform: scale(1);
+}
+
+.playButton :hover{
+    color: white;
+    transform: scale(1);
+}
+
 .playButton {
     border: none;
     align-items: center;
     box-shadow: none;
-    width: 3em;
-    height: 3em;
-    background-color: beige;;
+    width: 4em;
+    height: 4em;
+    background-color: beige;
 }
 
 .songTitle {
     font-size: xx-large;
     color: black;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .artistSubTitle {
-    margin-top: -1em;
     color: black;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 .time {
@@ -62,7 +90,7 @@
     display: flex;
     justify-content: space-between;
     color: black;
-    font-size: smaller;
+    font-size: larger;
 }
 
 .time p{
