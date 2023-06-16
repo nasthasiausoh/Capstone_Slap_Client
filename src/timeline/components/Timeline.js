@@ -30,7 +30,7 @@ const Timeline = ({ listOfSlaps, setListOfSlap, listOfUsers, setListOfUsers, log
       <div className="timeline-heading-contents">
         {loggedInUser ? (
           <h1>
-            <i>{loggedInUser.username}</i>'s Timeline
+            <i>{loggedInUser.username}'s</i> Timeline
           </h1>
         ) : (
           <h1>Timeline</h1>
