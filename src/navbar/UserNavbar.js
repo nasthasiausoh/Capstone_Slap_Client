@@ -15,28 +15,29 @@ const UserNavbar = ({loggedInUser, setLoggedInUser}) => {
          <Link to ='/'><img src={slapLogo} alt='slapLogo'/></Link> 
        {/* whenever we click on that h1 tag, it will link us back to the Home page. */}
       </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-        <li>
-              <Link to='/'>Home</Link>
-          </li>
 
+      <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li>
-        <Link to={`/timeline/${loggedInUser.id}`}>Timeline</Link>
+          <Link to='/'>Home</Link>
         </li>
 
         <li>
-            <Link to={`/profile/${loggedInUser.id}`}>My Profile</Link>
+          <Link to={`/timeline/${loggedInUser.id}`}>Timeline</Link>
+        </li>
+
+        <li>
+          <Link to={`/profile/${loggedInUser.id}`}>My Profile</Link>
           </li>
 
         <li>
           <Link to="/">Log out</Link>
         </li>
-        </ul>
-       <div className='hamburger' onClick={handleClick}>
+      </ul>
+
+      <div className='hamburger' onClick={handleClick}>
         {click ? (<FaTimes size={50} style={{color: '#fff'}} />) : (<FaBars size={50} style={{color: '#fff'}} /> )}
         {/* if the hamburger menu is clicked then show FaTimes (X button), if not then show the FaBars (hamburger menu icon) */}
-
-       </div>
+      </div>
         
     </div>
   )

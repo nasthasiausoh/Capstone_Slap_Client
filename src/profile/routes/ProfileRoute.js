@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Footer from '../../footer/Footer';
 import UserNavbar from '../../navbar/UserNavbar';
 import { useParams } from 'react-router';
-import Profile from '../git/Profile';
+import Profile from '../components/Profile';
 
 const ProfileRoute = ({ loggedInUser, setLoggedInUser, listOfSlaps, setListOfSlaps, addNewSlap,  deleteSlap}) => {
   

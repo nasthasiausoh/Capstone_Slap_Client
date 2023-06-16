@@ -5,7 +5,7 @@
    justify-content:left;
    margin: 30px;
    height: 250px;
-   width: 90rem;
+   width: 100rem;
    padding: 30px;
    background-color: rgb(253, 253, 236);
    border-radius: 10px; 
@@ -47,17 +47,19 @@
    padding: 20px;
    border-radius: 10px;
 }
+
 .timeline-slap-component {
    display: flex;
    flex-direction: column;
    justify-content: space-around;
    margin: 30px;
    height: 250px;
-   width: 90rem;
+   width: 100rem;
    padding: 30px;
    background-color: rgb(253, 253, 236);
    border-radius: 10px;
-    }
+}
+
 .timeline-user-profile-details {
    display: flex;
    flex-direction: row;
