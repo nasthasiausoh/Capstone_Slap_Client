@@ -30,5 +30,7 @@ As part of our capstone project, our team created an API and the UI for the app 
 
 
 ### **_4. Set-Up Instructions_**
-#### The server-side API can be found here: https://github.com/nasthasiausoh/Capstone_Slap_Client
-Note: Please follow the set-up instructions for the server-side first
+#### The server-side API can be found here: https://github.com/R08K09/Capstone_Slap_Server
+>Note: Please follow the set-up instructions for the server-side first
+
+
