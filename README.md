@@ -19,8 +19,6 @@ As part of our capstone project, our team created an API and the UI for the app 
 
 #### Component diagram
 
-#### Data flow diagram
-
 ### **_3. Tech Stack_**
 
 * JavaScript
@@ -30,7 +28,25 @@ As part of our capstone project, our team created an API and the UI for the app 
 
 
 ### **_4. Set-Up Instructions_**
-#### The server-side API can be found here: https://github.com/R08K09/Capstone_Slap_Server
->Note: Please follow the set-up instructions for the server-side first
+#### The server-side API can be found [here](https://github.com/R08K09/Capstone_Slap_Server)
+> Please follow the set-up instructions for the server-side first
+
+Ensure the following is installed on your machine:
+
+- Visual Studio Code
+
+1. Install node modules - in your terminal, perform the following command: `npm install` or `npm i`
+   
+> NOTE: `npm install`/ `npm i` should also install react-icons, emoji-mart, and react-router. If it does not, please follow steps 2, 3, and 4. If the node modules are installed correctly, continue to step 5.
+
+2. Install React Icons - in your terminal, perform the following command: `npm install react-icons`
+
+3. Install React Slick - in your terminal, perform the following command: `npm install emoji-mart`
+
+4. Install React Router - in your terminal, perform the following command: `npm install react-router`
+
+5. Run the React App - in your terminal, perform the following command: `npm start`. The app should automatically open in your default browser. If it does not, you can manually navigate to http://localhost:3000 using your preferred browser.
+   
+6. Enjoy viewing our full-stack app!
 
 
