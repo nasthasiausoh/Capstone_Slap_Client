@@ -17,9 +17,11 @@ As part of our capstone project, our team created an API and the UI for the app 
 
 #### Wireframe 
 
+![Wireframe](Diagrams/Wireframe.png)
+
 #### Component diagram
 
-![Component Diagram](Diagrams/ComponentDiagram.png)
+![Component Diagram](Diagrams/Component_Diagram.png)
 
 
 
