@@ -50,3 +50,18 @@ Ensure the following is installed on your machine:
 6. Enjoy viewing our full-stack app!
 
 
+### **_5. Future Devlopments_**
+
+1. Enable light/dark mode functionality
+2. Use WebSockets to allow different users to interact and allow for better scalability
+3. Utilise a database (such as AWS) to store songs, videos and pictures
+
+### **_6. Collaborators_**
+
+* GitHub: [Nasthasia Usoh](https://github.com/nasthasiausoh)
+* GitHub: [Rada Kanchananupradit](https://github.com/R08K09)
+* GitHub: [Subrina Faisal](https://github.com/Subrina7)
+* GitHub: [Zaynah Sadiq](https://github.com/Zaynah99)
+
+
+
