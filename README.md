@@ -21,7 +21,7 @@ As part of our capstone project, our team created an API and the UI for the app 
 
 #### Component diagram
 
-![Component Diagram](Diagrams/Component_Diagram.png)
+![Component Diagram](Diagrams/Component%20Diagram.png)
 
 
 
